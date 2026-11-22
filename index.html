@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tes Kunci Karir Holland (Kunci Karierku) - Pendamping Kuartet RIASEC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-paper: #FAF8F4;
@@ -75,9 +78,20 @@
             padding: 0;
             background-color: var(--bg-paper);
             color: var(--ink-primary);
-            font-family: 'Segoe UI', 'Nunito', 'Trebuchet MS', system-ui, -apple-system, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             line-height: 1.55;
             -webkit-font-smoothing: antialiased;
+        }
+
+        .brand-title,
+        .hero-title,
+        .sheet-title,
+        .section-heading,
+        .result-title,
+        .card-title,
+        .card-prof-title,
+        .top3-name {
+            font-family: 'Lora', Georgia, serif;
         }
 
         .hidden {
@@ -265,24 +279,12 @@
             padding: 28px;
         }
 
-        .school-tag {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--warm);
-            background-color: var(--warm-soft);
-            border: 1px solid var(--warm-border);
-            padding: 4px 12px;
-            border-radius: 999px;
-            margin-bottom: 14px;
-        }
-
         .hero-title {
             margin: 0 0 10px;
             font-size: clamp(24px, 3.2vw, 32px);
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
+            font-weight: 700;
+            line-height: 1.22;
+            letter-spacing: -0.015em;
             color: var(--ink-primary);
         }
 
@@ -300,9 +302,11 @@
             background-color: var(--bg-paper);
             border: 1px solid var(--border-soft);
             border-radius: var(--radius-md);
-            font-size: 14px;
+            font-family: 'Lora', Georgia, serif;
+            font-style: italic;
+            font-size: 14.5px;
             color: var(--ink-primary);
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         .quote-callout::before {
@@ -1557,7 +1561,6 @@
             <div class="home-grid">
                 <!-- Kolom Kiri: Pengantar & 6 Tipe RIASEC -->
                 <div class="panel home-intro">
-                    <span class="school-tag">MAN Kepulauan Selayar / Siswa SMA Sederajat</span>
                     <h2 class="hero-title">Tes Kunci Karir Holland (Kunci Karierku)</h2>
                     <p class="hero-subtitle">Media pendamping bimbingan karir sebelum bermain kartu Kuartet RIASEC di kelas.</p>
 
@@ -1740,7 +1743,7 @@
                     <div>
                         <span class="part-badge">Hasil Tes Kunci Karir Holland</span>
                         <h2 class="result-title">Profil Kunci Karierku & Kuartet RIASEC</h2>
-                        <p id="result-identity-display" class="result-identity">Peserta: Siswa SMA / MAN Kepulauan Selayar</p>
+                        <p id="result-identity-display" class="result-identity">Peserta: Tes Kunci Karir Holland</p>
                     </div>
                     <div class="result-actions no-print">
                         <button type="button" onclick="window.print()" class="btn btn-primary btn-sm">Cetak / Simpan PDF</button>
@@ -2572,7 +2575,7 @@
 
             document.getElementById('result-identity-display').innerHTML = idParts.length > 0
                 ? idParts.join(' &nbsp;|&nbsp; ')
-                : 'Peserta: Siswa SMA / MAN Kepulauan Selayar';
+                : 'Peserta: Tes Kunci Karir Holland';
 
             const sortedCats = [...CATEGORIES].sort((a, b) => {
                 if (scores[b].total !== scores[a].total) {
