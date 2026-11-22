@@ -1,0 +1,2825 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Kunci Karir Holland (Kunci Karierku) - Pendamping Kuartet RIASEC</title>
+    <style>
+        :root {
+            --bg-paper: #FAF8F4;
+            --bg-surface: #FFFFFF;
+            --bg-subtle: #F3EFE7;
+            --border-soft: #E4DEC9;
+            --border-strong: #CFC7B4;
+            --ink-primary: #1E242B;
+            --ink-secondary: #434C59;
+            --ink-muted: #525D6B;
+
+            --accent: #1F4E5F;
+            --accent-hover: #173C4A;
+            --accent-soft: #EBF3F5;
+            --accent-border: #B7D1DA;
+
+            --warm: #C86D3B;
+            --warm-soft: #FDF3EC;
+            --warm-border: #F0CBB2;
+
+            --success: #24663B;
+            --success-hover: #1B4F2D;
+            --danger: #B91C1C;
+            --danger-bg: #FEF2F2;
+            --danger-border: #FCA5A5;
+
+            /* Palet Pastel Lembut & Ramah Siswa per Kategori RIASEC */
+            --r-bg: #EBF3F9;
+            --r-border: #A9CBE3;
+            --r-text: #185278;
+
+            --i-bg: #ECF5EE;
+            --i-border: #A7D1B2;
+            --i-text: #1F5C34;
+
+            --a-bg: #F4EEF8;
+            --a-border: #CCB2DF;
+            --a-text: #5B2C78;
+
+            --s-bg: #FDF2E6;
+            --s-border: #EBBF8E;
+            --s-text: #96470E;
+
+            --e-bg: #FCEEEF;
+            --e-border: #E6B0BA;
+            --e-text: #91233F;
+
+            --c-bg: #FBF6DF;
+            --c-border: #DEC973;
+            --c-text: #6B5104;
+
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --shadow-card: 0 2px 10px rgba(30, 36, 43, 0.05);
+            --shadow-lift: 0 6px 18px rgba(30, 36, 43, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-paper);
+            color: var(--ink-primary);
+            font-family: 'Segoe UI', 'Nunito', 'Trebuchet MS', system-ui, -apple-system, sans-serif;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .tabular-nums {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Header Navigasi */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            background-color: var(--bg-surface);
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .header-inner {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            min-height: 64px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .brand-mark {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            display: grid;
+            grid-template-columns: repeat(3, 6px);
+            grid-template-rows: repeat(2, 6px);
+            gap: 3px;
+            place-content: center;
+            flex-shrink: 0;
+        }
+
+        .brand-mark span {
+            border-radius: 2px;
+            display: block;
+        }
+
+        .brand-title {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--ink-primary);
+            line-height: 1.2;
+        }
+
+        .brand-sub {
+            margin: 2px 0 0;
+            font-size: 12px;
+            color: var(--ink-muted);
+        }
+
+        .header-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-pill {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background-color: var(--accent-soft);
+            color: var(--accent);
+            border: 1px solid var(--accent-border);
+            white-space: nowrap;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 4px;
+            background-color: var(--bg-subtle);
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background-color: var(--accent);
+            transition: width 0.25s ease;
+        }
+
+        /* Kontainer Utama */
+        .container {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 28px 20px 56px;
+        }
+
+        /* Kartu & Permukaan */
+        .panel {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-soft);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-card);
+        }
+
+        /* Tombol */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 44px;
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-success {
+            background-color: var(--success);
+            color: #FFFFFF;
+        }
+
+        .btn-success:hover {
+            background-color: var(--success-hover);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-surface);
+            color: var(--ink-primary);
+            border-color: var(--border-strong);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-subtle);
+        }
+
+        .btn-sm {
+            min-height: 38px;
+            padding: 7px 14px;
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           HALAMAN 0: BERANDA (Split Layout Ramah Siswa)
+        ========================================================== */
+        .home-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.95fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .home-intro {
+            padding: 28px;
+        }
+
+        .school-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--warm);
+            background-color: var(--warm-soft);
+            border: 1px solid var(--warm-border);
+            padding: 4px 12px;
+            border-radius: 999px;
+            margin-bottom: 14px;
+        }
+
+        .hero-title {
+            margin: 0 0 10px;
+            font-size: clamp(24px, 3.2vw, 32px);
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: var(--ink-primary);
+        }
+
+        .hero-subtitle {
+            margin: 0 0 18px;
+            font-size: 15px;
+            color: var(--ink-secondary);
+        }
+
+        .quote-callout {
+            position: relative;
+            overflow: hidden;
+            margin: 0 0 24px;
+            padding: 14px 18px 14px 22px;
+            background-color: var(--bg-paper);
+            border: 1px solid var(--border-soft);
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            color: var(--ink-primary);
+            line-height: 1.6;
+        }
+
+        .quote-callout::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 4px;
+            background-color: var(--accent);
+        }
+
+        .riasec-mini-title {
+            margin: 0 0 10px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--ink-secondary);
+        }
+
+        .riasec-mini-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .riasec-mini-item {
+            padding: 10px 12px;
+            border-radius: var(--radius-md);
+            border: 1px solid;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .riasec-letter {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            font-weight: 800;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 1px solid currentColor;
+        }
+
+        .riasec-mini-name {
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .riasec-mini-hint {
+            font-size: 11.5px;
+            opacity: 0.9;
+        }
+
+        /* Kartu Form Identitas di Kanan */
+        .home-sheet {
+            position: relative;
+            overflow: hidden;
+            padding: 28px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .home-sheet::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--accent);
+        }
+
+        .sheet-title {
+            margin: 0 0 4px;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .sheet-desc {
+            margin: 0 0 18px;
+            font-size: 13px;
+            color: var(--ink-muted);
+        }
+
+        .form-group {
+            margin-bottom: 14px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--ink-secondary);
+            margin-bottom: 6px;
+        }
+
+        .form-input {
+            width: 100%;
+            min-height: 42px;
+            padding: 9px 12px;
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--ink-primary);
+            background-color: #FFFFFF;
+            border: 1px solid var(--border-strong);
+            border-radius: var(--radius-sm);
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(31, 78, 95, 0.14);
+        }
+
+        .test-summary-list {
+            margin: 18px 0 20px;
+            padding: 12px 14px;
+            background-color: var(--bg-paper);
+            border: 1px solid var(--border-soft);
+            border-radius: var(--radius-md);
+            font-size: 13px;
+            color: var(--ink-secondary);
+        }
+
+        .test-summary-list div {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+        }
+
+        .test-summary-list div + div {
+            border-top: 1px dashed var(--border-soft);
+        }
+
+        .home-cta-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .home-cta-wrap .btn {
+            width: 100%;
+        }
+
+        /* =========================================================
+           HALAMAN 1 & 2: LEMBAR TES (BAGIAN 1 & BAGIAN 2)
+        ========================================================== */
+        .section-intro {
+            padding: 22px 24px;
+            margin-bottom: 18px;
+        }
+
+        .section-top-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .part-badge {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background-color: var(--accent-soft);
+            color: var(--accent);
+        }
+
+        .counter-text {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--ink-secondary);
+        }
+
+        .section-heading {
+            margin: 0 0 6px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .section-lead {
+            margin: 0 0 16px;
+            font-size: 14px;
+            color: var(--ink-secondary);
+        }
+
+        /* Legenda Skala Sticky Ringkas */
+        .scale-legend {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            padding: 12px;
+            background-color: var(--bg-paper);
+            border: 1px solid var(--border-soft);
+            border-radius: var(--radius-md);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #FFFFFF;
+            padding: 8px 10px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-soft);
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--ink-primary);
+        }
+
+        .legend-num {
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+
+        .legend-num-2 { background-color: #1F4E5F; color: #FFFFFF; }
+        .legend-num-1 { background-color: #D9ECF2; color: #173C4A; }
+        .legend-num-0 { background-color: #ECE8DF; color: #374151; }
+
+        /* Kelompok Kategori Soal */
+        .category-block {
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .category-header {
+            padding: 14px 20px;
+            border-bottom: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .category-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .category-badge {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background-color: #FFFFFF;
+            font-weight: 800;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid currentColor;
+            flex-shrink: 0;
+        }
+
+        .category-title {
+            margin: 0;
+            font-size: 15.5px;
+            font-weight: 800;
+        }
+
+        .category-sub {
+            margin: 1px 0 0;
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .category-progress {
+            font-size: 12px;
+            font-weight: 700;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        .question-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .question-row {
+            padding: 16px 20px;
+            border-top: 1px solid #F0ECE1;
+            transition: background-color 0.15s ease;
+        }
+
+        .question-row:first-child {
+            border-top: none;
+        }
+
+        .question-row.is-answered {
+            background-color: #FCFBF8;
+        }
+
+        .question-row.unanswered-highlight {
+            background-color: var(--danger-bg) !important;
+            outline: 2px solid var(--danger-border);
+            outline-offset: -2px;
+            animation: gentleShake 0.32s ease;
+        }
+
+        @keyframes gentleShake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-4px); }
+            75% { transform: translateX(4px); }
+        }
+
+        .question-prompt {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .q-num {
+            width: 26px;
+            height: 26px;
+            border-radius: 7px;
+            background-color: var(--bg-subtle);
+            color: var(--ink-secondary);
+            font-size: 12px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .q-text {
+            margin: 0;
+            font-size: 15px;
+            color: var(--ink-primary);
+            line-height: 1.55;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            padding-left: 38px;
+        }
+
+        /* Baris Profesi Bagian 2 lebih ringkas di desktop */
+        .prof-row {
+            padding: 13px 20px;
+            border-top: 1px solid #F0ECE1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            transition: background-color 0.15s ease;
+        }
+
+        .prof-row:first-child {
+            border-top: none;
+        }
+
+        .prof-row.is-answered {
+            background-color: #FCFBF8;
+        }
+
+        .prof-row.unanswered-highlight {
+            background-color: var(--danger-bg) !important;
+            outline: 2px solid var(--danger-border);
+            outline-offset: -2px;
+            animation: gentleShake 0.32s ease;
+        }
+
+        .prof-name-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .prof-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--ink-primary);
+        }
+
+        .prof-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            width: 430px;
+            flex-shrink: 0;
+        }
+
+        .option-btn {
+            min-height: 42px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1.5px solid var(--border-soft);
+            background-color: #FFFFFF;
+            color: var(--ink-secondary);
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.14s ease;
+            user-select: none;
+        }
+
+        .option-btn:hover {
+            border-color: var(--accent-border);
+            background-color: var(--accent-soft);
+            color: var(--ink-primary);
+        }
+
+        .option-btn:active {
+            transform: scale(0.98);
+        }
+
+        .option-btn .opt-score {
+            font-weight: 800;
+        }
+
+        .option-btn.selected-2 {
+            background-color: #1F4E5F;
+            border-color: #173C4A;
+            color: #FFFFFF;
+            font-weight: 700;
+        }
+
+        .option-btn.selected-1 {
+            background-color: #D9ECF2;
+            border-color: #1F4E5F;
+            color: #173C4A;
+            font-weight: 700;
+        }
+
+        .option-btn.selected-0 {
+            background-color: #ECE8DF;
+            border-color: #6B7280;
+            color: #1E242B;
+            font-weight: 700;
+        }
+
+        .nav-footer {
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        /* =========================================================
+           HALAMAN 3: HASIL & KARTU KUARTET RIASEC
+        ========================================================== */
+        .results-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .result-hero {
+            padding: 24px;
+        }
+
+        .result-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .result-title {
+            margin: 6px 0 4px;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .result-identity {
+            margin: 0;
+            font-size: 13.5px;
+            color: var(--ink-secondary);
+        }
+
+        .result-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .result-overview-grid {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .code-box {
+            background-color: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .code-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .code-tiles {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .code-tile {
+            width: 54px;
+            height: 58px;
+            border-radius: 12px;
+            background-color: #FFFFFF;
+            border: 2px solid;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .code-tile small {
+            font-size: 10px;
+            font-weight: 700;
+            margin-top: 3px;
+        }
+
+        .code-names {
+            margin: 0 0 6px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--ink-primary);
+        }
+
+        .code-note {
+            margin: 0;
+            font-size: 12px;
+            color: var(--ink-secondary);
+        }
+
+        .chart-box {
+            background-color: var(--bg-paper);
+            border: 1px solid var(--border-soft);
+            border-radius: var(--radius-md);
+            padding: 16px;
+        }
+
+        .chart-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .chart-head h3 {
+            margin: 0;
+            font-size: 13.5px;
+            font-weight: 700;
+        }
+
+        .chart-head span {
+            font-size: 11.5px;
+            color: var(--ink-muted);
+        }
+
+        /* Tabel Skor */
+        .section-card {
+            padding: 22px 24px;
+        }
+
+        .card-title {
+            margin: 0 0 4px;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .card-sub {
+            margin: 0 0 16px;
+            font-size: 13px;
+            color: var(--ink-muted);
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--border-soft);
+            border-radius: var(--radius-md);
+        }
+
+        .score-table {
+            width: 100%;
+            min-width: 640px;
+            table-layout: fixed;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 13.5px;
+        }
+
+        .score-table th:first-child,
+        .score-table td:first-child {
+            width: 34%;
+        }
+
+        .score-table th:not(:first-child),
+        .score-table td:not(:first-child) {
+            width: 11%;
+        }
+
+        .score-table th,
+        .score-table td {
+            padding: 11px 10px;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .score-table th:first-child,
+        .score-table td:first-child {
+            text-align: left;
+            padding-left: 14px;
+        }
+
+        .score-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .score-table .row-label {
+            font-weight: 700;
+            color: var(--ink-primary);
+        }
+
+        .score-table .row-hint {
+            display: block;
+            font-size: 11.5px;
+            font-weight: 400;
+            color: var(--ink-muted);
+        }
+
+        .score-table .total-row {
+            background-color: var(--accent-soft);
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .score-table .total-row td {
+            font-size: 15px;
+        }
+
+        /* Top 3 Deskripsi */
+        .top3-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .top3-card {
+            border-radius: var(--radius-md);
+            border: 1px solid;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .top3-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .rank-pill {
+            font-size: 11.5px;
+            font-weight: 800;
+            padding: 3px 9px;
+            border-radius: 6px;
+            background-color: #FFFFFF;
+            border: 1px solid currentColor;
+        }
+
+        .top3-score {
+            font-size: 12.5px;
+            font-weight: 800;
+        }
+
+        .top3-name {
+            margin: 0 0 6px;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .top3-desc {
+            margin: 0;
+            font-size: 13px;
+            color: var(--ink-primary);
+            line-height: 1.55;
+        }
+
+        .top3-jump-btn {
+            width: 100%;
+            min-height: 38px;
+            padding: 7px 12px;
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            border: 1px solid currentColor;
+            font-family: inherit;
+            font-size: 12.5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+        }
+
+        .top3-jump-btn:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Eksplorasi 24 Kartu Kuartet RIASEC */
+        .quartet-header-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .quartet-tabs {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .quartet-tab {
+            min-height: 42px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1.5px solid;
+            font-family: inherit;
+            font-size: 12.5px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            opacity: 0.78;
+            transition: opacity 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+        }
+
+        .quartet-tab:hover {
+            opacity: 1;
+        }
+
+        .quartet-tab.is-active {
+            opacity: 1;
+            box-shadow: 0 0 0 2px var(--ink-primary);
+        }
+
+        .quartet-banner {
+            border-radius: var(--radius-md);
+            border: 1px solid;
+            padding: 14px 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .quartet-banner h4 {
+            margin: 0 0 4px;
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .quartet-banner p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--ink-primary);
+            max-width: 68ch;
+        }
+
+        .quartet-set-pill {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 999px;
+            background-color: #FFFFFF;
+            border: 1px solid currentColor;
+            white-space: nowrap;
+        }
+
+        .quartet-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        /* Desain Kartu Kuartet Fisik yang Rapi */
+        .playing-card {
+            background-color: #FFFFFF;
+            border: 2px solid;
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.16s ease, box-shadow 0.16s ease;
+        }
+
+        .playing-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lift);
+        }
+
+        .playing-card-top {
+            padding: 12px 16px;
+            border-bottom: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .playing-card-id {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-code-chip {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            border: 1px solid currentColor;
+            font-size: 13px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .card-cat-label {
+            font-size: 11px;
+            font-weight: 700;
+            display: block;
+            line-height: 1.1;
+        }
+
+        .card-prof-title {
+            margin: 2px 0 0;
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--ink-primary);
+            line-height: 1.2;
+        }
+
+        .card-index-tag {
+            font-size: 11.5px;
+            font-weight: 700;
+            background-color: #FFFFFF;
+            padding: 3px 9px;
+            border-radius: 6px;
+            border: 1px solid currentColor;
+            white-space: nowrap;
+        }
+
+        .playing-card-body {
+            padding: 14px 16px;
+            flex: 1;
+        }
+
+        .traits-heading {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--ink-muted);
+            margin: 0 0 8px;
+        }
+
+        .traits-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .traits-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--ink-primary);
+            line-height: 1.45;
+        }
+
+        .trait-bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-top: 7px;
+            flex-shrink: 0;
+        }
+
+        .playing-card-foot {
+            padding: 10px 16px;
+            background-color: var(--bg-paper);
+            border-top: 1px solid var(--border-soft);
+            font-size: 11.5px;
+            color: var(--ink-secondary);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+        }
+
+        .set-members {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .set-member-chip {
+            padding: 2px 7px;
+            border-radius: 5px;
+            background-color: #FFFFFF;
+            border: 1px solid var(--border-soft);
+            font-size: 11px;
+        }
+
+        .set-member-chip.is-current {
+            font-weight: 800;
+            border-color: currentColor;
+        }
+
+        /* Panduan Bermain */
+        .guide-panel {
+            padding: 22px 24px;
+            background-color: var(--warm-soft);
+            border-color: var(--warm-border);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .guide-step {
+            background-color: #FFFFFF;
+            border: 1px solid var(--warm-border);
+            border-radius: var(--radius-md);
+            padding: 14px;
+        }
+
+        .guide-step-title {
+            font-size: 13.5px;
+            font-weight: 800;
+            color: var(--warm);
+            margin: 0 0 6px;
+        }
+
+        .guide-step p {
+            margin: 0;
+            font-size: 12.5px;
+            color: var(--ink-secondary);
+            line-height: 1.5;
+        }
+
+        /* Toast & Modal */
+        .toast-box {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            max-width: 460px;
+            width: calc(100% - 32px);
+            background-color: var(--ink-primary);
+            color: #FFFFFF;
+            padding: 12px 16px;
+            border-radius: var(--radius-md);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            font-size: 13.5px;
+        }
+
+        .toast-close {
+            background-color: rgba(255, 255, 255, 0.16);
+            color: #FFFFFF;
+            border: none;
+            border-radius: 6px;
+            padding: 5px 10px;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            background-color: rgba(30, 36, 43, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .modal-card {
+            max-width: 380px;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .modal-card h3 {
+            margin: 0 0 8px;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .modal-card p {
+            margin: 0 0 20px;
+            font-size: 13.5px;
+            color: var(--ink-secondary);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .modal-actions .btn {
+            flex: 1;
+        }
+
+        /* Responsif Tablet & Mobile */
+        @media (max-width: 900px) {
+            .home-grid,
+            .result-overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .top3-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .quartet-tabs {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .prof-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .prof-options {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 18px 14px 44px;
+            }
+
+            .home-intro,
+            .home-sheet,
+            .section-intro,
+            .section-card,
+            .result-hero,
+            .guide-panel {
+                padding: 18px 16px;
+            }
+
+            .riasec-mini-grid,
+            .scale-legend,
+            .options-grid,
+            .quartet-grid,
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .options-grid {
+                padding-left: 0;
+            }
+
+            .option-btn {
+                justify-content: flex-start;
+                padding: 10px 14px;
+            }
+
+            .prof-options .option-btn {
+                flex-direction: column;
+                justify-content: center;
+                gap: 2px;
+                padding: 8px 6px;
+                font-size: 12px;
+            }
+
+            .quartet-tabs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-footer {
+                flex-direction: column-reverse;
+                align-items: stretch;
+            }
+
+            .nav-footer .btn {
+                width: 100%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Gaya Cetak / Simpan PDF */
+        @media print {
+            body {
+                background-color: #FFFFFF !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .container {
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+            .panel,
+            .playing-card {
+                box-shadow: none !important;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Atas -->
+    <header class="site-header no-print">
+        <div class="header-inner">
+            <div class="brand">
+                <div class="brand-mark" aria-hidden="true">
+                    <span style="background:#1D5B82;"></span>
+                    <span style="background:#24663B;"></span>
+                    <span style="background:#633282;"></span>
+                    <span style="background:#A85214;"></span>
+                    <span style="background:#9E2A47;"></span>
+                    <span style="background:#7D6008;"></span>
+                </div>
+                <div>
+                    <h1 class="brand-title">Kunci Karierku (RIASEC)</h1>
+                    <p class="brand-sub">Pendamping Bimbingan Karir Kuartet RIASEC</p>
+                </div>
+            </div>
+            <div class="header-status">
+                <span id="header-step-badge" class="step-pill hidden">Bagian 1 / 2</span>
+            </div>
+        </div>
+        <div id="progress-container" class="progress-track hidden">
+            <div id="progress-bar" class="progress-fill"></div>
+        </div>
+    </header>
+
+    <!-- Toast Pemberitahuan -->
+    <div id="toast-box" class="toast-box hidden no-print" role="status" aria-live="polite">
+        <span id="toast-message">Pesan pemberitahuan</span>
+        <button type="button" onclick="hideToast()" class="toast-close">Tutup</button>
+    </div>
+
+    <!-- Modal Konfirmasi Ulangi Tes -->
+    <div id="reset-modal" class="modal-backdrop hidden no-print" role="dialog" aria-modal="true" aria-labelledby="reset-modal-title">
+        <div class="panel modal-card">
+            <h3 id="reset-modal-title">Ulangi Tes Kunci Karir?</h3>
+            <p>Seluruh jawaban dan hasil skor saat ini akan dihapus dan diatur ulang ke awal.</p>
+            <div class="modal-actions">
+                <button type="button" onclick="closeResetModal()" class="btn btn-secondary">Batal</button>
+                <button type="button" onclick="confirmResetTest()" class="btn btn-primary">Ya, Ulangi</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!-- =========================================================
+             HALAMAN 0: BERANDA
+        ========================================================== -->
+        <section id="view-home">
+            <div class="home-grid">
+                <!-- Kolom Kiri: Pengantar & 6 Tipe RIASEC -->
+                <div class="panel home-intro">
+                    <span class="school-tag">MAN Kepulauan Selayar / Siswa SMA Sederajat</span>
+                    <h2 class="hero-title">Tes Kunci Karir Holland (Kunci Karierku)</h2>
+                    <p class="hero-subtitle">Media pendamping bimbingan karir sebelum bermain kartu Kuartet RIASEC di kelas.</p>
+
+                    <blockquote class="quote-callout">
+                        &ldquo;Tes kunci karir akan mengungkap proses penyesuaian diri serta menunjukkan bagaimana mengidentifikasi pekerjaan Anda sebelum bermain Kuartet RIASEC.&rdquo;
+                    </blockquote>
+
+                    <p class="riasec-mini-title">Enam Tipe Kepribadian Karir (RIASEC)</p>
+                    <div class="riasec-mini-grid">
+                        <div class="riasec-mini-item" style="background: var(--r-bg); border-color: var(--r-border); color: var(--r-text);">
+                            <span class="riasec-letter">R</span>
+                            <div>
+                                <div class="riasec-mini-name">Realistic</div>
+                                <div class="riasec-mini-hint">Praktik, alat, dan mesin</div>
+                            </div>
+                        </div>
+                        <div class="riasec-mini-item" style="background: var(--i-bg); border-color: var(--i-border); color: var(--i-text);">
+                            <span class="riasec-letter">I</span>
+                            <div>
+                                <div class="riasec-mini-name">Investigative</div>
+                                <div class="riasec-mini-hint">Sains, riset, dan analisis</div>
+                            </div>
+                        </div>
+                        <div class="riasec-mini-item" style="background: var(--a-bg); border-color: var(--a-border); color: var(--a-text);">
+                            <span class="riasec-letter">A</span>
+                            <div>
+                                <div class="riasec-mini-name">Artistic</div>
+                                <div class="riasec-mini-hint">Seni, desain, dan ekspresi</div>
+                            </div>
+                        </div>
+                        <div class="riasec-mini-item" style="background: var(--s-bg); border-color: var(--s-border); color: var(--s-text);">
+                            <span class="riasec-letter">S</span>
+                            <div>
+                                <div class="riasec-mini-name">Social</div>
+                                <div class="riasec-mini-hint">Mengajar dan menolong</div>
+                            </div>
+                        </div>
+                        <div class="riasec-mini-item" style="background: var(--e-bg); border-color: var(--e-border); color: var(--e-text);">
+                            <span class="riasec-letter">E</span>
+                            <div>
+                                <div class="riasec-mini-name">Enterprising</div>
+                                <div class="riasec-mini-hint">Memimpin dan berwirausaha</div>
+                            </div>
+                        </div>
+                        <div class="riasec-mini-item" style="background: var(--c-bg); border-color: var(--c-border); color: var(--c-text);">
+                            <span class="riasec-letter">C</span>
+                            <div>
+                                <div class="riasec-mini-name">Conventional</div>
+                                <div class="riasec-mini-hint">Data, angka, dan keteraturan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Lembar Identitas & Mulai Tes -->
+                <div class="panel home-sheet">
+                    <div>
+                        <h3 class="sheet-title">Lembar Identitas Siswa</h3>
+                        <p class="sheet-desc">Opsional. Boleh dikosongkan atau diisi untuk dicetak pada lembar hasil.</p>
+
+                        <div class="form-group">
+                            <label for="input-nama" class="form-label">Nama Lengkap</label>
+                            <input type="text" id="input-nama" placeholder="Contoh: Andi Nurul" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-kelas" class="form-label">Kelas</label>
+                            <input type="text" id="input-kelas" placeholder="Contoh: XI IPA 1" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-tanggal" class="form-label">Tanggal Pengisian</label>
+                            <input type="date" id="input-tanggal" class="form-input">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="test-summary-list">
+                            <div><span>Bagian 1: Gambaran Diri</span><strong>24 pernyataan</strong></div>
+                            <div><span>Bagian 2: Minat Profesi</span><strong>42 profesi</strong></div>
+                            <div><span>Hasil Akhir</span><strong>Kode 3 Huruf + 24 Kartu</strong></div>
+                        </div>
+
+                        <div class="home-cta-wrap">
+                            <button type="button" onclick="startTest()" class="btn btn-primary">
+                                Mulai Tes Kunci Karir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             HALAMAN 1: BAGIAN 1 (24 PERNYATAAN DIRI)
+        ========================================================== -->
+        <section id="view-part1" class="hidden">
+            <div class="panel section-intro">
+                <div class="section-top-row">
+                    <span class="part-badge">Bagian 1 dari 2</span>
+                    <span id="part1-counter" class="counter-text tabular-nums">Terjawab: 0 / 24</span>
+                </div>
+                <h2 class="section-heading">Bagaimana Anda Melihat Diri Anda</h2>
+                <p class="section-lead">Bacalah setiap pernyataan dengan saksama, lalu pilih angka yang paling menggambarkan diri Anda saat ini.</p>
+
+                <div class="scale-legend">
+                    <div class="legend-item">
+                        <span class="legend-num legend-num-2">2</span>
+                        <span>Sangat Sesuai</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-num legend-num-1">1</span>
+                        <span>Agak Sesuai</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-num legend-num-0">0</span>
+                        <span>Tidak Menggambarkan</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="part1-container"></div>
+
+            <div class="panel nav-footer">
+                <button type="button" onclick="goToView('home')" class="btn btn-secondary">
+                    Kembali ke Beranda
+                </button>
+                <button type="button" onclick="validateAndGoPart2()" class="btn btn-primary">
+                    Lanjut ke Bagian 2 (Profesi)
+                </button>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             HALAMAN 2: BAGIAN 2 (42 PROFESI YANG DIMINATI)
+        ========================================================== -->
+        <section id="view-part2" class="hidden">
+            <div class="panel section-intro">
+                <div class="section-top-row">
+                    <span class="part-badge">Bagian 2 dari 2</span>
+                    <span id="part2-counter" class="counter-text tabular-nums">Terjawab: 0 / 42</span>
+                </div>
+                <h2 class="section-heading">Profesi yang Diminati</h2>
+                <p class="section-lead">Tentukan tingkat ketertarikan Anda terhadap masing-masing dari 42 daftar profesi berikut.</p>
+
+                <div class="scale-legend">
+                    <div class="legend-item">
+                        <span class="legend-num legend-num-2">2</span>
+                        <span>Sangat Berminat / Tertarik</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-num legend-num-1">1</span>
+                        <span>Mungkin / Agak Berminat</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-num legend-num-0">0</span>
+                        <span>Tidak Memilih / Tidak Tertarik</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="part2-container"></div>
+
+            <div class="panel nav-footer">
+                <button type="button" onclick="goToView('part1')" class="btn btn-secondary">
+                    Kembali ke Bagian 1
+                </button>
+                <button type="button" onclick="validateAndShowResults()" class="btn btn-success">
+                    Lihat Hasil & Kartu Kuartet
+                </button>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             HALAMAN 3: HASIL TES & KARTU KUARTET RIASEC
+        ========================================================== -->
+        <section id="view-results" class="hidden results-stack">
+
+            <!-- Ringkasan Kode Kunci Karir & Grafik -->
+            <div class="panel result-hero">
+                <div class="result-header">
+                    <div>
+                        <span class="part-badge">Hasil Tes Kunci Karir Holland</span>
+                        <h2 class="result-title">Profil Kunci Karierku & Kuartet RIASEC</h2>
+                        <p id="result-identity-display" class="result-identity">Peserta: Siswa SMA / MAN Kepulauan Selayar</p>
+                    </div>
+                    <div class="result-actions no-print">
+                        <button type="button" onclick="window.print()" class="btn btn-primary btn-sm">Cetak / Simpan PDF</button>
+                        <button type="button" onclick="openResetModal()" class="btn btn-secondary btn-sm">Ulangi Tes</button>
+                    </div>
+                </div>
+
+                <div class="result-overview-grid">
+                    <div class="code-box">
+                        <div class="code-label">Kode Kunci Karir Dominan Anda</div>
+                        <div id="holland-code-tiles" class="code-tiles"></div>
+                        <p id="holland-code-names" class="code-names">Realistic, Investigative, Artistic</p>
+                        <p class="code-note">Tiga tipe kepribadian dengan skor tertinggi sebagai acuan bermain Kuartet RIASEC.</p>
+                    </div>
+
+                    <div class="chart-box">
+                        <div class="chart-head">
+                            <h3>Grafik Profil Kunci Karir Holland (Skor Maks. 22)</h3>
+                            <span>Baris 1 + Baris 2</span>
+                        </div>
+                        <div id="profile-chart-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabel Rekapitulasi Skor -->
+            <div class="panel section-card">
+                <h3 class="card-title">Tabel Rekapitulasi Skor Kunci Karir</h3>
+                <p class="card-sub">Perhitungan otomatis dari Bagian 1 (maksimal 8) dan Bagian 2 (maksimal 14) sesuai pedoman Kunci Karir Holland.</p>
+
+                <div class="table-wrap">
+                    <table class="score-table tabular-nums">
+                        <thead>
+                            <tr>
+                                <th>Komponen Penilaian</th>
+                                <th style="background: var(--r-bg); color: var(--r-text);">R<br><small>Realistic</small></th>
+                                <th style="background: var(--i-bg); color: var(--i-text);">I<br><small>Investigative</small></th>
+                                <th style="background: var(--a-bg); color: var(--a-text);">A<br><small>Artistic</small></th>
+                                <th style="background: var(--s-bg); color: var(--s-text);">S<br><small>Social</small></th>
+                                <th style="background: var(--e-bg); color: var(--e-text);">E<br><small>Enterprising</small></th>
+                                <th style="background: var(--c-bg); color: var(--c-text);">C<br><small>Conventional</small></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="row-label">Baris 1</span>
+                                    <span class="row-hint">Bagian 1: Gambaran Diri (Maks. 8)</span>
+                                </td>
+                                <td id="score-r1">0</td>
+                                <td id="score-i1">0</td>
+                                <td id="score-a1">0</td>
+                                <td id="score-s1">0</td>
+                                <td id="score-e1">0</td>
+                                <td id="score-c1">0</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="row-label">Baris 2</span>
+                                    <span class="row-hint">Bagian 2: Minat Profesi (Maks. 14)</span>
+                                </td>
+                                <td id="score-r2">0</td>
+                                <td id="score-i2">0</td>
+                                <td id="score-a2">0</td>
+                                <td id="score-s2">0</td>
+                                <td id="score-e2">0</td>
+                                <td id="score-c2">0</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>
+                                    <span class="row-label">Total Baris 3</span>
+                                    <span class="row-hint">Jumlah Baris 1 + Baris 2 (Maks. 22)</span>
+                                </td>
+                                <td id="score-rt">0</td>
+                                <td id="score-it">0</td>
+                                <td id="score-at">0</td>
+                                <td id="score-st">0</td>
+                                <td id="score-et">0</td>
+                                <td id="score-ct">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Penjelasan 3 Tipe Dominan -->
+            <div class="panel section-card">
+                <h3 class="card-title">Interpretasi 3 Tipe Kepribadian Dominan Anda</h3>
+                <p class="card-sub">Berdasarkan teori pilihan karir John L. Holland dan materi layanan bimbingan karir Kuartet RIASEC.</p>
+                <div id="top3-descriptions" class="top3-grid"></div>
+            </div>
+
+            <!-- 24 Kartu Profesi Kuartet RIASEC -->
+            <div id="quartet-section" class="panel section-card">
+                <div class="quartet-header-row">
+                    <div>
+                        <h3 class="card-title">Eksplorasi 24 Kartu Profesi Kuartet RIASEC</h3>
+                        <p class="card-sub" style="margin-bottom:0;">Pilih kategori di bawah ini untuk mempelajari 4 kartu profesi beserta ciri-cirinya sebelum bermain. Tanda (*) menandakan 3 tipe dominan Anda.</p>
+                    </div>
+                </div>
+
+                <div id="quartet-tabs" class="quartet-tabs no-print"></div>
+                <div id="quartet-category-info" class="quartet-banner"></div>
+                <div id="quartet-cards-grid" class="quartet-grid"></div>
+            </div>
+
+            <!-- Panduan Singkat Bermain Kuartet RIASEC -->
+            <div class="panel guide-panel">
+                <h3 class="card-title">Panduan Singkat Bermain Kuartet RIASEC di Kelas</h3>
+                <div class="guide-grid">
+                    <div class="guide-step">
+                        <h4 class="guide-step-title">1. Jumlah Pemain</h4>
+                        <p>Dimainkan secara berkelompok oleh <strong>4 sampai 5 siswa</strong> dalam satu kelompok kecil.</p>
+                    </div>
+                    <div class="guide-step">
+                        <h4 class="guide-step-title">2. Pembagian Kartu</h4>
+                        <p>Kocok seluruh <strong>24 kartu</strong>, bagikan masing-masing 4 kartu kepada pemain, dan sisanya diletakkan tertutup di tengah.</p>
+                    </div>
+                    <div class="guide-step">
+                        <h4 class="guide-step-title">3. Alur & Tebak Profesi</h4>
+                        <p>Giliran berjalan <strong>searah jarum jam</strong>. Pemain meminta kartu kategori yang sama dengan menyebutkan <strong>nama atau ciri-ciri profesi</strong>.</p>
+                    </div>
+                    <div class="guide-step">
+                        <h4 class="guide-step-title">4. Kumpulkan Kuartet</h4>
+                        <p>Jika berhasil mengumpulkan <strong>4 kartu profesi dalam 1 kategori RIASEC</strong> (1 kuartet), letakkan di meja. Pemilik kuartet terbanyak menang.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigasi Bawah Hasil -->
+            <div class="panel nav-footer no-print">
+                <button type="button" onclick="goToView('part2')" class="btn btn-secondary">
+                    Kembali Periksa Jawaban
+                </button>
+                <div class="result-actions">
+                    <button type="button" onclick="window.print()" class="btn btn-primary">Cetak / Simpan Hasil</button>
+                    <button type="button" onclick="openResetModal()" class="btn btn-secondary">Ulangi Tes</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        const RIASEC_META = {
+            R: {
+                code: 'R',
+                name: 'Realistic',
+                bg: '#EBF3F9',
+                border: '#B8D4E8',
+                text: '#1D5B82',
+                desc: 'Tipe Realistic menyukai aktivitas kerja yang bersifat praktis, fisik, menggunakan peralatan, mesin, objek nyata, tumbuhan, atau hewan. Cenderung terampil secara mekanik, lugas, dan menyukai hasil kerja yang dapat dilihat atau disentuh secara langsung.'
+            },
+            I: {
+                code: 'I',
+                name: 'Investigative',
+                bg: '#ECF5EE',
+                border: '#B5D8BE',
+                text: '#24663B',
+                desc: 'Tipe Investigative menyukai kegiatan penyelidikan, observasi, penelitian ilmiah, analisis data, serta pemecahan soal matematika dan sains. Cenderung teliti, kritis, intelektual, ingin tahu tinggi, dan senang bekerja dengan ide-ide ilmiah.'
+            },
+            A: {
+                code: 'A',
+                name: 'Artistic',
+                bg: '#F4EEF8',
+                border: '#D4BEE4',
+                text: '#633282',
+                desc: 'Tipe Artistic menyukai aktivitas kreatif, ekspresif, dan tidak terikat aturan kaku, seperti seni rupa, musik, tari, drama, desain, fotografi, maupun penulisan kreatif. Cenderung imajinatif, orisinal, mandiri, dan peka terhadap estetika.'
+            },
+            S: {
+                code: 'S',
+                name: 'Social',
+                bg: '#FDF2E6',
+                border: '#F0C99D',
+                text: '#A85214',
+                desc: 'Tipe Social menyukai kegiatan yang berhubungan dengan interaksi manusia untuk membantu, mengajar, membimbing, melatih, merawat, atau melakukan konseling. Cenderung ramah, empatik, kooperatif, sabar, dan dapat dipercaya.'
+            },
+            E: {
+                code: 'E',
+                name: 'Enterprising',
+                bg: '#FCEEEF',
+                border: '#EBBCC4',
+                text: '#9E2A47',
+                desc: 'Tipe Enterprising menyukai kegiatan memimpin, memengaruhi orang lain, berbicara di depan umum, bernegosiasi, mengelola usaha, atau mencapai target bisnis dan organisasi. Cenderung enerjik, ambisius, percaya diri, dan komunikatif.'
+            },
+            C: {
+                code: 'C',
+                name: 'Conventional',
+                bg: '#FBF7E4',
+                border: '#E8DA96',
+                text: '#7D6008',
+                desc: 'Tipe Conventional menyukai pekerjaan yang terstruktur, rapi, sistematis, dan berhubungan dengan pengelolaan data, arsip, angka, administrasi, maupun keuangan. Cenderung teliti, patuh aturan, terorganisir, dan mampu menjalankan rencana dengan baik.'
+            }
+        };
+
+        const PART1_QUESTIONS = [
+            { id: 'r1', type: 'R', num: 1, text: 'Saya menyukai pekerjaan yang berhubungan dengan binatang, atau pekerjaan yang menggunakan peralatan atau mesin.' },
+            { id: 'r2', type: 'R', num: 2, text: 'Dibandingkan dengan teman sebaya, saya memiliki keterampilan yang baik dalam bekerja menggunakan peralatan, gambar-gambar mekanis, mesin, atau binatang.' },
+            { id: 'r3', type: 'R', num: 3, text: 'Saya menghargai hal-hal praktis yang dapat berkaitan dengan sesuatu yang dilihat atau disentuh, seperti memelihara tumbuhan dan binatang, atau sesuatu yang dapat dibangun atau diperbaiki.' },
+            { id: 'r4', type: 'R', num: 4, text: 'Saya adalah orang yang menyukai pekerjaan praktik, mekanik, dan realistik.' },
+
+            { id: 'i1', type: 'I', num: 1, text: 'Saya suka belajar dan menyelesaikan soal-soal matematika atau sains.' },
+            { id: 'i2', type: 'I', num: 2, text: 'Dibandingkan teman sebaya, saya memiliki kemampuan yang baik dalam memahami dan menyelesaikan soal matematika dan sains.' },
+            { id: 'i3', type: 'I', num: 3, text: 'Saya menghargai sains.' },
+            { id: 'i4', type: 'I', num: 4, text: 'Saya adalah orang yang teliti serta menyukai sains dan intelektual.' },
+
+            { id: 'a1', type: 'A', num: 1, text: 'Saya suka melakukan aktifitas kreatif seperti seni, drama, kerajinan, tari, musik, atau penulisan kreatif.' },
+            { id: 'a2', type: 'A', num: 2, text: 'Dibandingkan teman sebaya, saya memiliki kemampuan artistik yang baik, seperti dalam penulisan kreatif, drama, kerajinan, musik, atau seni.' },
+            { id: 'a3', type: 'A', num: 3, text: 'Saya menghargai seni kreatif, seperti drama, musik, seni, atau hasil karya penulis kreatif.' },
+            { id: 'a4', type: 'A', num: 4, text: 'Saya adalah orang yang artistik, imajinatif, original, dan mandiri.' },
+
+            { id: 's1', type: 'S', num: 1, text: 'Saya suka mengerjakan sesuatu yang dapat membantu orang lain: seperti mengajar, melakukan pertolongan pertama, atau memberikan informasi.' },
+            { id: 's2', type: 'S', num: 2, text: 'Dibandingkan teman sebaya, saya memiliki kemampuan yang baik dalam mengajar, melakukan konseling, merawat, atau memberikan informasi.' },
+            { id: 's3', type: 'S', num: 3, text: 'Saya suka menolong orang lain dan menyelesaikan masalah sosial.' },
+            { id: 's4', type: 'S', num: 4, text: 'Saya adalah orang yang suka menolong, ramah, dan dapat dipercaya.' },
+
+            { id: 'e1', type: 'E', num: 1, text: 'Saya suka memimpin dan mempengaruhi orang lain, serta menawarkan ide atau barang.' },
+            { id: 'e2', type: 'E', num: 2, text: 'Dibandingkan teman sebaya, saya memiliki kemampuan yang baik dalam memimpin orang serta dalam menyampaikan ide atau menjual barang.' },
+            { id: 'e3', type: 'E', num: 3, text: 'Saya menghargai keberhasilan dalam politik, kepemimpinan atau bisnis.' },
+            { id: 'e4', type: 'E', num: 4, text: 'Saya adalah orang yang enerjik, ambisius, dan dapat bersosialisasi dengan baik.' },
+
+            { id: 'c1', type: 'C', num: 1, text: 'Saya menyukai pekerjaan yang berhubungan dengan angka, rekaman/data, atau mesin dalam suatu keteraturan.' },
+            { id: 'c2', type: 'C', num: 2, text: 'Dibandingkan dengan teman sebaya, saya memiliki kemampuan yang baik dalam bekerja dengan rekaman/data tertulis dan angka yang sistematik dan runtut/teratur.' },
+            { id: 'c3', type: 'C', num: 3, text: 'Saya menghargai keberhasilan dalam bisnis.' },
+            { id: 'c4', type: 'C', num: 4, text: 'Saya adalah orang yang menyukai keteraturan, dan mampu menjalankan rencana dengan baik.' }
+        ];
+
+        const PART2_PROFESSIONS = [
+            { id: 'pr1', type: 'R', name: 'Pengemudi Bis' },
+            { id: 'pr2', type: 'R', name: 'Pembudidaya Ikan' },
+            { id: 'pr3', type: 'R', name: 'Peternak' },
+            { id: 'pr4', type: 'R', name: 'Mekanik Truk' },
+            { id: 'pr5', type: 'R', name: 'Pilot Pesawat Udara' },
+            { id: 'pr6', type: 'R', name: 'Tukang Kayu' },
+            { id: 'pr7', type: 'R', name: 'Insinyur Mesin' },
+
+            { id: 'pi1', type: 'I', name: 'Ahli Biologi' },
+            { id: 'pi2', type: 'I', name: 'Ahli Kimia' },
+            { id: 'pi3', type: 'I', name: 'Ahli Astronomi' },
+            { id: 'pi4', type: 'I', name: 'Laboran' },
+            { id: 'pi5', type: 'I', name: 'Insinyur Elektro' },
+            { id: 'pi6', type: 'I', name: 'Teknisi Kimia' },
+            { id: 'pi7', type: 'I', name: 'Peneliti Ilmiah' },
+
+            { id: 'pa1', type: 'A', name: 'Desainer Pakaian' },
+            { id: 'pa2', type: 'A', name: 'Penari' },
+            { id: 'pa3', type: 'A', name: 'Musisi' },
+            { id: 'pa4', type: 'A', name: 'Novelis' },
+            { id: 'pa5', type: 'A', name: 'Aktor/ Aktris' },
+            { id: 'pa6', type: 'A', name: 'Artis' },
+            { id: 'pa7', type: 'A', name: 'Penyanyi' },
+
+            { id: 'ps1', type: 'S', name: 'Terapis Fisik' },
+            { id: 'ps2', type: 'S', name: 'Pustakawan' },
+            { id: 'ps3', type: 'S', name: 'Perawat' },
+            { id: 'ps4', type: 'S', name: 'Konselor' },
+            { id: 'ps5', type: 'S', name: 'Terapis Wicara' },
+            { id: 'ps6', type: 'S', name: 'Pekerja Sosial' },
+            { id: 'ps7', type: 'S', name: 'Guru' },
+
+            { id: 'pe1', type: 'E', name: 'Pengacara' },
+            { id: 'pe2', type: 'E', name: 'Manajer Penjualan (1)' },
+            { id: 'pe3', type: 'E', name: 'Penyiar Radio/ TV' },
+            { id: 'pe4', type: 'E', name: 'Petugas Penjualan' },
+            { id: 'pe5', type: 'E', name: 'Manajer Restoran' },
+            { id: 'pe6', type: 'E', name: 'Agen Penjualan' },
+            { id: 'pe7', type: 'E', name: 'Manajer Penjualan (2)' },
+
+            { id: 'pc1', type: 'C', name: 'Pegawai Asuransi' },
+            { id: 'pc2', type: 'C', name: 'Panitera' },
+            { id: 'pc3', type: 'C', name: 'Teller Bank' },
+            { id: 'pc4', type: 'C', name: 'Guru Bisnis' },
+            { id: 'pc5', type: 'C', name: 'Petugas Survei' },
+            { id: 'pc6', type: 'C', name: 'Ahli Perpajakan' },
+            { id: 'pc7', type: 'C', name: 'Petugas' }
+        ];
+
+        const QUARTET_CARDS = {
+            R: [
+                {
+                    title: 'Polisi',
+                    traits: [
+                        'Menjaga ketertiban dan keamanan masyarakat',
+                        'Menegakkan hukum',
+                        'Mencegah terjadinya kejahatan',
+                        'Mengayomi masyarakat'
+                    ]
+                },
+                {
+                    title: 'Pilot',
+                    traits: [
+                        'Mengoperasikan mesin pesawat dengan keahlian teknis tinggi',
+                        'Berorientasi pada kontrol mekanik pesawat',
+                        'Bekerja berdasarkan prosedur teknis dan kondisi lapangan',
+                        'Mengambil keputusan secara cepat dan nyata saat terjadi kendala penerbangan',
+                        'Fokus pada keamanan fisik dan sistem kerja pesawat'
+                    ]
+                },
+                {
+                    title: 'Koki',
+                    traits: [
+                        'Bekerja menggunakan alat-alat dapur serta bahan secara langsung',
+                        'Menghasilkan produk yang dapat dinikmati secara nyata',
+                        'Bekerja secara praktis',
+                        'Mengutamakan ketepatan proses, takaran, dan waktu',
+                        'Terbiasa bekerja dalam ritme yang aktif dan terstruktur'
+                    ]
+                },
+                {
+                    title: 'Arsitek',
+                    traits: [
+                        'Merancang struktur bangunan yang fungsional dan aman',
+                        'Memperhitungkan aspek teknis, ukuran, serta material konstruksi',
+                        'Mewujudkan desain menjadi bentuk bangunan nyata',
+                        'Berorientasi pada hasil karya fisik yang terukur',
+                        'Menyesuaikan rancangan dengan kondisi lingkungan dan teknis lapangan'
+                    ]
+                }
+            ],
+            I: [
+                {
+                    title: 'Dokter',
+                    traits: [
+                        'Mengamati gejala serta menganalisis kondisi kesehatan pasien',
+                        'Menggunakan data medis dan hasil pemeriksaan dalam menegakkan diagnosis',
+                        'Menerapkan prinsip ilmiah untuk menentukan penanganan yang tepat',
+                        'Bekerja dengan ketelitian tinggi serta berpikir logis',
+                        'Terus mempelajari perkembangan ilmu pengetahuan medis'
+                    ]
+                },
+                {
+                    title: 'Ilmuwan',
+                    traits: [
+                        'Melakukan penelitian guna menemukan dan menguji teori baru',
+                        'Mengumpulkan serta menganalisis data secara sistematis',
+                        'Berpikir kritis, objektif, dan berlandaskan bukti ilmiah',
+                        'Tertarik memahami sebab akibat suatu fenomena',
+                        'Menghasilkan temuan berbasis riset dan eksperimen'
+                    ]
+                },
+                {
+                    title: 'Programmer',
+                    traits: [
+                        'Menganalisis masalah dan menyusun solusi melalui logika pemrograman',
+                        'Mengembangkan serta menguji sistem atau aplikasi berbasis teknologi',
+                        'Bekerja dengan ketelitian tinggi terhadap struktur dan kode',
+                        'Mengidentifikasi dan memperbaiki kesalahan sistem secara analitis',
+                        'Terus menyesuaikan diri dengan perkembangan teknologi dan komputasi'
+                    ]
+                },
+                {
+                    title: 'Arkeolog',
+                    traits: [
+                        'Meneliti peninggalan sejarah untuk memahami kehidupan masa lalu',
+                        'Melakukan observasi, penggalian, serta analisis artefak secara ilmiah',
+                        'Menggunakan metode penelitian dalam mengidentifikasi temuan',
+                        'Berpikir analitis dan teliti terhadap detail bukti sejarah',
+                        'Menyusun kesimpulan berdasarkan data dan kajian ilmiah'
+                    ]
+                }
+            ],
+            A: [
+                {
+                    title: 'Pelukis',
+                    traits: [
+                        'Mengekspresikan ide, emosi, dan imajinasi melalui karya visual',
+                        'Memiliki kepekaan tinggi terhadap warna, bentuk, dan komposisi',
+                        'Bekerja secara bebas tanpa terikat aturan yang kaku',
+                        'Mengutamakan nilai estetika dan orisinalitas karya',
+                        'Menghasilkan karya seni yang unik dan personal'
+                    ]
+                },
+                {
+                    title: 'Fotografer',
+                    traits: [
+                        'Menangkap momen, objek, dan suasana melalui sudut pandang visual',
+                        'Mengatur pencahayaan, komposisi, dan estetika gambar',
+                        'Memiliki kreativitas dalam menciptakan pesan melalui foto',
+                        'Peka terhadap detail visual dan keindahan lingkungan',
+                        'Menghasilkan karya yang bersifat ekspresif dan artistik'
+                    ]
+                },
+                {
+                    title: 'Desainer',
+                    traits: [
+                        'Merancang konsep visual yang kreatif dan komunikatif',
+                        'Menggabungkan unsur estetika dengan fungsi tampilan',
+                        'Berpikir inovatif dalam menciptakan ide dan gaya baru',
+                        'Peka terhadap tren visual, warna, dan tata letak',
+                        'Menghasilkan karya yang menarik secara visual dan bermakna'
+                    ]
+                },
+                {
+                    title: 'Aktor',
+                    traits: [
+                        'Menghayati dan memerankan karakter dalam sebuah cerita',
+                        'Mengekspresikan emosi melalui ucapan, mimik, dan gerak tubuh',
+                        'Memiliki imajinasi dan kreativitas dalam mendalami peran',
+                        'Fleksibel dalam menyesuaikan diri dengan berbagai karakter',
+                        'Menyampaikan pesan cerita secara ekspresif kepada penonton'
+                    ]
+                }
+            ],
+            S: [
+                {
+                    title: 'Guru',
+                    traits: [
+                        'Membimbing serta mendidik peserta didik dalam proses belajar',
+                        'Menyampaikan ilmu pengetahuan dan nilai karakter secara komunikatif',
+                        'Memahami kebutuhan serta perkembangan belajar siswa',
+                        'Memiliki kesabaran, empati, dan kepedulian tinggi',
+                        'Berperan membantu siswa mengembangkan potensinya'
+                    ]
+                },
+                {
+                    title: 'Psikolog',
+                    traits: [
+                        'Membantu individu memahami kondisi emosi dan perilakunya',
+                        'Mendengarkan permasalahan secara empatik tanpa menghakimi',
+                        'Memberikan pendampingan dan solusi psikologis yang tepat',
+                        'Peka terhadap perasaan serta kondisi mental orang lain',
+                        'Berorientasi pada kesejahteraan psikologis individu'
+                    ]
+                },
+                {
+                    title: 'Dosen',
+                    traits: [
+                        'Mengajar dan membimbing mahasiswa dalam pengembangan keilmuan',
+                        'Berdiskusi serta bertukar gagasan secara akademis',
+                        'Membantu mahasiswa berpikir kritis dan mandiri',
+                        'Memiliki kemampuan komunikasi dan pembinaan yang baik',
+                        'Berperan dalam pengembangan sumber daya manusia'
+                    ]
+                },
+                {
+                    title: 'Perawat',
+                    traits: [
+                        'Merawat serta mendampingi pasien dalam proses pemulihan',
+                        'Memberikan perhatian terhadap kondisi fisik dan emosional pasien',
+                        'Bekerja dengan sikap sabar, peduli, dan penuh tanggung jawab',
+                        'Menjalin komunikasi yang hangat dengan pasien dan keluarga',
+                        'Mengutamakan keselamatan serta kenyamanan orang lain'
+                    ]
+                }
+            ],
+            E: [
+                {
+                    title: 'Pengusaha',
+                    traits: [
+                        'Melihat peluang serta berani mengambil keputusan dalam berwirausaha',
+                        'Mengelola dan mengembangkan usaha agar terus bertumbuh',
+                        'Memiliki jiwa kepemimpinan dalam mengarahkan tim kerja',
+                        'Berorientasi pada pencapaian target dan keuntungan usaha',
+                        'Percaya diri dan adaptif menghadapi persaingan'
+                    ]
+                },
+                {
+                    title: 'Techpreneur',
+                    traits: [
+                        'Mengembangkan bisnis berbasis inovasi dan teknologi digital',
+                        'Berani menciptakan solusi baru untuk kebutuhan pasar modern',
+                        'Memiliki visi jauh ke depan dan jiwa kepemimpinan',
+                        'Mampu meyakinkan investor, mitra, dan pengguna',
+                        'Berorientasi pada pertumbuhan dan daya saing usaha'
+                    ]
+                },
+                {
+                    title: 'Pengacara',
+                    traits: [
+                        'Meyakinkan dan membela kepentingan klien berdasarkan hukum',
+                        'Memiliki kemampuan komunikasi, negosiasi, dan argumentasi yang kuat',
+                        'Percaya diri saat berbicara di depan umum maupun persidangan',
+                        'Berani mengambil sikap dalam menyelesaikan sengketa',
+                        'Berorientasi pada keberhasilan pembelaan secara profesional'
+                    ]
+                },
+                {
+                    title: 'Konten Kreator',
+                    traits: [
+                        'Membangun pengaruh dan menarik perhatian audiens melalui karya digital',
+                        'Mengomunikasikan ide secara persuasif dan menarik',
+                        'Memiliki inisiatif dalam mengembangkan personal branding',
+                        'Mampu membaca peluang tren dan kebutuhan audiens',
+                        'Berorientasi pada jangkauan, engagement, dan pengembangan karier'
+                    ]
+                }
+            ],
+            C: [
+                {
+                    title: 'Teller Bank',
+                    traits: [
+                        'Melayani transaksi keuangan nasabah sesuai prosedur perbankan',
+                        'Bekerja dengan ketelitian tinggi terhadap angka dan nominal uang',
+                        'Mengikuti aturan dan standar operasional secara konsisten',
+                        'Menjaga kerapian catatan serta bukti transaksi',
+                        'Bertanggung jawab terhadap keakuratan administrasi keuangan'
+                    ]
+                },
+                {
+                    title: 'Akuntan',
+                    traits: [
+                        'Mencatat, mengelola, dan menyusun laporan keuangan secara sistematis',
+                        'Bekerja dengan ketelitian tinggi terhadap data dan angka',
+                        'Mematuhi standar dan aturan akuntansi yang berlaku',
+                        'Menganalisis kesesuaian data keuangan secara terstruktur',
+                        'Menjaga akurasi dan keteraturan dokumen keuangan'
+                    ]
+                },
+                {
+                    title: 'Arsiparis',
+                    traits: [
+                        'Mengelola, mengelompokkan, dan menyimpan dokumen secara teratur',
+                        'Menjaga kerapian serta kelengkapan arsip agar mudah ditemukan kembali',
+                        'Bekerja secara sistematis dan teliti terhadap detail dokumen',
+                        'Mematuhi prosedur penyimpanan dan keamanan data',
+                        'Mengutamakan keteraturan dalam pengelolaan informasi'
+                    ]
+                },
+                {
+                    title: 'Pustakawan',
+                    traits: [
+                        'Mengatur dan mengklasifikasikan koleksi buku secara sistematis',
+                        'Mencatat data peminjaman dan pengembalian buku dengan tertib',
+                        'Menjaga keteraturan ruang serta kelengkapan koleksi perpustakaan',
+                        'Membantu pengunjung menemukan sumber informasi secara terstruktur',
+                        'Bekerja sesuai aturan dan sistem pengelolaan perpustakaan'
+                    ]
+                }
+            ]
+        };
+
+        const CATEGORIES = ['R', 'I', 'A', 'S', 'E', 'C'];
+
+        const state = {
+            currentView: 'home',
+            part1Answers: {},
+            part2Answers: {},
+            activeQuartetTab: 'R',
+            top3Codes: ['R', 'I', 'A']
+        };
+
+        window.onload = function () {
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('input-tanggal');
+            if (dateInput) dateInput.value = today;
+
+            renderPart1();
+            renderPart2();
+            updateCounters();
+        };
+
+        function goToView(viewName) {
+            state.currentView = viewName;
+
+            ['home', 'part1', 'part2', 'results'].forEach(v => {
+                const el = document.getElementById('view-' + v);
+                if (el) el.classList.add('hidden');
+            });
+
+            const activeEl = document.getElementById('view-' + viewName);
+            if (activeEl) activeEl.classList.remove('hidden');
+
+            const stepBadge = document.getElementById('header-step-badge');
+            const progressContainer = document.getElementById('progress-container');
+            const progressBar = document.getElementById('progress-bar');
+
+            if (viewName === 'home') {
+                stepBadge.classList.add('hidden');
+                progressContainer.classList.add('hidden');
+            } else if (viewName === 'part1') {
+                stepBadge.classList.remove('hidden');
+                progressContainer.classList.remove('hidden');
+                updateProgressBar();
+            } else if (viewName === 'part2') {
+                stepBadge.classList.remove('hidden');
+                progressContainer.classList.remove('hidden');
+                updateProgressBar();
+            } else if (viewName === 'results') {
+                stepBadge.classList.remove('hidden');
+                progressContainer.classList.remove('hidden');
+                stepBadge.textContent = 'Hasil & Kuartet';
+                progressBar.style.width = '100%';
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function startTest() {
+            goToView('part1');
+        }
+
+        function updateProgressBar() {
+            const totalAnswered = Object.keys(state.part1Answers).length + Object.keys(state.part2Answers).length;
+            const pct = Math.round((totalAnswered / 66) * 100);
+            const progressBar = document.getElementById('progress-bar');
+            const stepBadge = document.getElementById('header-step-badge');
+            if (progressBar) progressBar.style.width = pct + '%';
+            if (stepBadge && (state.currentView === 'part1' || state.currentView === 'part2')) {
+                stepBadge.textContent = `Total: ${totalAnswered} / 66 (${pct}%)`;
+            }
+        }
+
+        function updateCounters() {
+            const c1 = Object.keys(state.part1Answers).length;
+            const c2 = Object.keys(state.part2Answers).length;
+            const el1 = document.getElementById('part1-counter');
+            const el2 = document.getElementById('part2-counter');
+            if (el1) el1.textContent = `Terjawab: ${c1} / 24`;
+            if (el2) el2.textContent = `Terjawab: ${c2} / 42`;
+
+            CATEGORIES.forEach(cat => {
+                const p1Done = PART1_QUESTIONS.filter(q => q.type === cat && state.part1Answers[q.id] !== undefined).length;
+                const p1Badge = document.getElementById(`p1-cat-count-${cat}`);
+                if (p1Badge) p1Badge.textContent = `${p1Done} / 4`;
+
+                const p2Done = PART2_PROFESSIONS.filter(p => p.type === cat && state.part2Answers[p.id] !== undefined).length;
+                const p2Badge = document.getElementById(`p2-cat-count-${cat}`);
+                if (p2Badge) p2Badge.textContent = `${p2Done} / 7`;
+            });
+
+            updateProgressBar();
+        }
+
+        function renderPart1() {
+            const container = document.getElementById('part1-container');
+            let html = '';
+
+            CATEGORIES.forEach(cat => {
+                const meta = RIASEC_META[cat];
+                const items = PART1_QUESTIONS.filter(q => q.type === cat);
+
+                html += `
+                <div class="panel category-block">
+                    <div class="category-header" style="background-color: ${meta.bg}; border-color: ${meta.border}; color: ${meta.text};">
+                        <div class="category-header-left">
+                            <span class="category-badge">${cat}</span>
+                            <div>
+                                <h3 class="category-title">${meta.name}</h3>
+                                <p class="category-sub">4 Pernyataan Gambaran Diri</p>
+                            </div>
+                        </div>
+                        <span id="p1-cat-count-${cat}" class="category-progress tabular-nums">0 / 4</span>
+                    </div>
+                    <div class="question-list">
+                `;
+
+                items.forEach(item => {
+                    html += `
+                        <div id="card-${item.id}" class="question-row">
+                            <div class="question-prompt">
+                                <span class="q-num">${item.num}</span>
+                                <p class="q-text">${item.text}</p>
+                            </div>
+                            <div class="options-grid">
+                                <button type="button" onclick="selectPart1('${item.id}', 2)" id="btn-${item.id}-2" class="option-btn">
+                                    <span class="opt-score">2</span>
+                                    <span>Sangat Sesuai</span>
+                                </button>
+                                <button type="button" onclick="selectPart1('${item.id}', 1)" id="btn-${item.id}-1" class="option-btn">
+                                    <span class="opt-score">1</span>
+                                    <span>Agak Sesuai</span>
+                                </button>
+                                <button type="button" onclick="selectPart1('${item.id}', 0)" id="btn-${item.id}-0" class="option-btn">
+                                    <span class="opt-score">0</span>
+                                    <span>Tidak Menggambarkan</span>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += `</div></div>`;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function selectPart1(id, val) {
+            state.part1Answers[id] = val;
+            const card = document.getElementById('card-' + id);
+            if (card) {
+                card.classList.remove('unanswered-highlight');
+                card.classList.add('is-answered');
+            }
+
+            [2, 1, 0].forEach(score => {
+                const btn = document.getElementById(`btn-${id}-${score}`);
+                if (btn) {
+                    btn.classList.remove('selected-2', 'selected-1', 'selected-0');
+                    if (score === val) btn.classList.add('selected-' + score);
+                }
+            });
+
+            updateCounters();
+        }
+
+        function renderPart2() {
+            const container = document.getElementById('part2-container');
+            let html = '';
+
+            CATEGORIES.forEach(cat => {
+                const meta = RIASEC_META[cat];
+                const items = PART2_PROFESSIONS.filter(p => p.type === cat);
+
+                html += `
+                <div class="panel category-block">
+                    <div class="category-header" style="background-color: ${meta.bg}; border-color: ${meta.border}; color: ${meta.text};">
+                        <div class="category-header-left">
+                            <span class="category-badge">${cat}</span>
+                            <div>
+                                <h3 class="category-title">Kelompok Profesi ${meta.name} (${cat})</h3>
+                                <p class="category-sub">7 Pilihan Profesi</p>
+                            </div>
+                        </div>
+                        <span id="p2-cat-count-${cat}" class="category-progress tabular-nums">0 / 7</span>
+                    </div>
+                    <div class="question-list">
+                `;
+
+                items.forEach((item, idx) => {
+                    html += `
+                        <div id="card-${item.id}" class="prof-row">
+                            <div class="prof-name-wrap">
+                                <span class="q-num">${idx + 1}</span>
+                                <span class="prof-name">${item.name}</span>
+                            </div>
+                            <div class="prof-options">
+                                <button type="button" onclick="selectPart2('${item.id}', 2)" id="btn-${item.id}-2" class="option-btn">
+                                    <span class="opt-score">2</span>
+                                    <span>Sangat Berminat</span>
+                                </button>
+                                <button type="button" onclick="selectPart2('${item.id}', 1)" id="btn-${item.id}-1" class="option-btn">
+                                    <span class="opt-score">1</span>
+                                    <span>Mungkin</span>
+                                </button>
+                                <button type="button" onclick="selectPart2('${item.id}', 0)" id="btn-${item.id}-0" class="option-btn">
+                                    <span class="opt-score">0</span>
+                                    <span>Tidak Memilih</span>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += `</div></div>`;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function selectPart2(id, val) {
+            state.part2Answers[id] = val;
+            const card = document.getElementById('card-' + id);
+            if (card) {
+                card.classList.remove('unanswered-highlight');
+                card.classList.add('is-answered');
+            }
+
+            [2, 1, 0].forEach(score => {
+                const btn = document.getElementById(`btn-${id}-${score}`);
+                if (btn) {
+                    btn.classList.remove('selected-2', 'selected-1', 'selected-0');
+                    if (score === val) btn.classList.add('selected-' + score);
+                }
+            });
+
+            updateCounters();
+        }
+
+        function validateAndGoPart2() {
+            const missing = PART1_QUESTIONS.filter(q => state.part1Answers[q.id] === undefined);
+            if (missing.length > 0) {
+                showToast(`Masih ada ${missing.length} pernyataan di Bagian 1 yang belum dipilih. Lengkapi bagian yang ditandai merah.`);
+                const firstCard = document.getElementById('card-' + missing[0].id);
+                if (firstCard) {
+                    firstCard.classList.add('unanswered-highlight');
+                    firstCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                return;
+            }
+            hideToast();
+            goToView('part2');
+        }
+
+        function validateAndShowResults() {
+            const missing = PART2_PROFESSIONS.filter(p => state.part2Answers[p.id] === undefined);
+            if (missing.length > 0) {
+                showToast(`Masih ada ${missing.length} pilihan profesi di Bagian 2 yang belum diisi. Lengkapi bagian yang ditandai merah.`);
+                const firstCard = document.getElementById('card-' + missing[0].id);
+                if (firstCard) {
+                    firstCard.classList.add('unanswered-highlight');
+                    firstCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                return;
+            }
+            hideToast();
+            calculateAndRenderResults();
+            goToView('results');
+        }
+
+        function calculateAndRenderResults() {
+            const scores = {};
+
+            CATEGORIES.forEach(cat => {
+                const row1 = PART1_QUESTIONS
+                    .filter(q => q.type === cat)
+                    .reduce((sum, q) => sum + (state.part1Answers[q.id] || 0), 0);
+
+                const row2 = PART2_PROFESSIONS
+                    .filter(p => p.type === cat)
+                    .reduce((sum, p) => sum + (state.part2Answers[p.id] || 0), 0);
+
+                const total = row1 + row2;
+                scores[cat] = { row1, row2, total };
+
+                document.getElementById(`score-${cat.toLowerCase()}1`).textContent = row1;
+                document.getElementById(`score-${cat.toLowerCase()}2`).textContent = row2;
+                document.getElementById(`score-${cat.toLowerCase()}t`).textContent = total;
+            });
+
+            const nama = document.getElementById('input-nama').value.trim();
+            const kelas = document.getElementById('input-kelas').value.trim();
+            const tanggal = document.getElementById('input-tanggal').value;
+            const idParts = [];
+            if (nama) idParts.push(`Nama: <strong>${escapeHtml(nama)}</strong>`);
+            if (kelas) idParts.push(`Kelas: <strong>${escapeHtml(kelas)}</strong>`);
+            if (tanggal) idParts.push(`Tanggal: <strong>${escapeHtml(tanggal)}</strong>`);
+
+            document.getElementById('result-identity-display').innerHTML = idParts.length > 0
+                ? idParts.join(' &nbsp;|&nbsp; ')
+                : 'Peserta: Siswa SMA / MAN Kepulauan Selayar';
+
+            const sortedCats = [...CATEGORIES].sort((a, b) => {
+                if (scores[b].total !== scores[a].total) {
+                    return scores[b].total - scores[a].total;
+                }
+                return CATEGORIES.indexOf(a) - CATEGORIES.indexOf(b);
+            });
+
+            const top3 = sortedCats.slice(0, 3);
+            state.top3Codes = top3;
+
+            document.getElementById('holland-code-tiles').innerHTML = top3.map((cat, idx) => {
+                const meta = RIASEC_META[cat];
+                return `
+                    <div class="code-tile" style="background-color: ${meta.bg}; border-color: ${meta.border}; color: ${meta.text};">
+                        <span>${cat}</span>
+                        <small>#${idx + 1}</small>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('holland-code-names').textContent = top3.map(c => RIASEC_META[c].name).join(', ');
+
+            renderProfileChart(scores);
+            renderTop3Descriptions(top3, scores);
+
+            state.activeQuartetTab = top3[0];
+            renderQuartetExplorer();
+        }
+
+        function renderProfileChart(scores) {
+            const container = document.getElementById('profile-chart-container');
+            const width = 460;
+            const height = 210;
+            const padLeft = 34;
+            const padRight = 20;
+            const padTop = 24;
+            const padBottom = 38;
+            const chartW = width - padLeft - padRight;
+            const chartH = height - padTop - padBottom;
+            const maxScore = 22;
+
+            const stepX = chartW / CATEGORIES.length;
+            const points = [];
+
+            let gridSvg = '';
+            [0, 5, 10, 15, 22].forEach(val => {
+                const y = padTop + chartH - (val / maxScore) * chartH;
+                gridSvg += `
+                    <line x1="${padLeft}" y1="${y}" x2="${width - padRight}" y2="${y}" stroke="#D8D0BE" stroke-dasharray="3,3" stroke-width="1"/>
+                    <text x="${padLeft - 6}" y="${y + 4}" text-anchor="end" font-size="10" fill="#525D6B">${val}</text>
+                `;
+            });
+
+            let barsSvg = '';
+            CATEGORIES.forEach((cat, idx) => {
+                const meta = RIASEC_META[cat];
+                const total = scores[cat].total;
+                const barW = 34;
+                const centerX = padLeft + stepX * idx + stepX / 2;
+                const barX = centerX - barW / 2;
+                const barH = (total / maxScore) * chartH;
+                const barY = padTop + chartH - barH;
+
+                points.push(`${centerX},${barY}`);
+
+                barsSvg += `
+                    <rect x="${barX}" y="${barY}" width="${barW}" height="${barH}" rx="6" fill="${meta.bg}" stroke="${meta.border}" stroke-width="1.5"/>
+                    <text x="${centerX}" y="${height - 18}" text-anchor="middle" font-size="12" font-weight="bold" fill="${meta.text}">${cat}</text>
+                    <text x="${centerX}" y="${height - 6}" text-anchor="middle" font-size="9.5" fill="#525D6B">${meta.name.slice(0, 6)}</text>
+                `;
+            });
+
+            const lineSvg = `<polyline fill="none" stroke="#1F4E5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="${points.join(' ')}"/>`;
+
+            let dotsSvg = '';
+            CATEGORIES.forEach((cat, idx) => {
+                const total = scores[cat].total;
+                const centerX = padLeft + stepX * idx + stepX / 2;
+                const barY = padTop + chartH - (total / maxScore) * chartH;
+                dotsSvg += `
+                    <circle cx="${centerX}" cy="${barY}" r="4.5" fill="#1F4E5F" stroke="#FFFFFF" stroke-width="1.5"/>
+                    <text x="${centerX}" y="${barY - 9}" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E242B" style="paint-order: stroke; stroke: #FAF8F4; stroke-width: 4px; stroke-linejoin: round;">${total}</text>
+                `;
+            });
+
+            container.innerHTML = `
+                <svg viewBox="0 0 ${width} ${height}" style="width:100%; height:auto; max-height:220px; display:block;">
+                    ${gridSvg}
+                    ${barsSvg}
+                    ${lineSvg}
+                    ${dotsSvg}
+                </svg>
+            `;
+        }
+
+        function renderTop3Descriptions(top3, scores) {
+            const container = document.getElementById('top3-descriptions');
+            container.innerHTML = top3.map((cat, rank) => {
+                const meta = RIASEC_META[cat];
+                const sc = scores[cat];
+                return `
+                    <div class="top3-card" style="background-color: ${meta.bg}; border-color: ${meta.border}; color: ${meta.text};">
+                        <div>
+                            <div class="top3-meta">
+                                <span class="rank-pill">Peringkat #${rank + 1} (${cat})</span>
+                                <span class="top3-score tabular-nums">Skor: ${sc.total} / 22</span>
+                            </div>
+                            <h4 class="top3-name">${meta.name}</h4>
+                            <p class="top3-desc">${meta.desc}</p>
+                        </div>
+                        <button type="button" onclick="jumpToQuartet('${cat}')" class="top3-jump-btn no-print" style="color: ${meta.text};">
+                            Lihat 4 Kartu ${meta.name}
+                        </button>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function jumpToQuartet(cat) {
+            switchQuartetTab(cat);
+            const sec = document.getElementById('quartet-section');
+            if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function renderQuartetExplorer() {
+            const tabsContainer = document.getElementById('quartet-tabs');
+
+            tabsContainer.innerHTML = CATEGORIES.map(cat => {
+                const meta = RIASEC_META[cat];
+                const isActive = state.activeQuartetTab === cat;
+                const isTop = state.top3Codes.includes(cat);
+                return `
+                    <button type="button" onclick="switchQuartetTab('${cat}')"
+                        class="quartet-tab ${isActive ? 'is-active' : ''}"
+                        style="background-color: ${meta.bg}; border-color: ${meta.border}; color: ${meta.text};">
+                        <span>${cat}: ${meta.name}</span>
+                        ${isTop ? '<span title="Termasuk 3 tipe dominan Anda">*</span>' : ''}
+                    </button>
+                `;
+            }).join('');
+
+            const activeCat = state.activeQuartetTab;
+            const meta = RIASEC_META[activeCat];
+            const cards = QUARTET_CARDS[activeCat];
+
+            const infoEl = document.getElementById('quartet-category-info');
+            infoEl.style.backgroundColor = meta.bg;
+            infoEl.style.borderColor = meta.border;
+            infoEl.style.color = meta.text;
+            infoEl.innerHTML = `
+                <div>
+                    <h4>Kategori Kuartet: ${meta.name} (${activeCat})</h4>
+                    <p>${meta.desc}</p>
+                </div>
+                <span class="quartet-set-pill">1 Set Kuartet = 4 Kartu</span>
+            `;
+
+            const gridEl = document.getElementById('quartet-cards-grid');
+            gridEl.innerHTML = cards.map((card, index) => `
+                <article class="playing-card" style="border-color: ${meta.border};">
+                    <div>
+                        <div class="playing-card-top" style="background-color: ${meta.bg}; border-color: ${meta.border}; color: ${meta.text};">
+                            <div class="playing-card-id">
+                                <span class="card-code-chip">${activeCat}${index + 1}</span>
+                                <div>
+                                    <span class="card-cat-label">${meta.name}</span>
+                                    <h5 class="card-prof-title">${card.title}</h5>
+                                </div>
+                            </div>
+                            <span class="card-index-tag">Kartu ${index + 1}/4</span>
+                        </div>
+
+                        <div class="playing-card-body">
+                            <p class="traits-heading">Ciri-Ciri Profesi:</p>
+                            <ul class="traits-list">
+                                ${card.traits.map(t => `
+                                    <li>
+                                        <span class="trait-bullet" style="background-color: ${meta.text};"></span>
+                                        <span>${t}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="playing-card-foot">
+                        <span>Set ${meta.name}:</span>
+                        <div class="set-members">
+                            ${cards.map(c => `
+                                <span class="set-member-chip ${c.title === card.title ? 'is-current' : ''}" style="${c.title === card.title ? `color:${meta.text};` : ''}">${c.title}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function switchQuartetTab(cat) {
+            state.activeQuartetTab = cat;
+            renderQuartetExplorer();
+        }
+
+        let toastTimer = null;
+        function showToast(msg) {
+            const box = document.getElementById('toast-box');
+            const msgEl = document.getElementById('toast-message');
+            msgEl.textContent = msg;
+            box.classList.remove('hidden');
+            if (toastTimer) clearTimeout(toastTimer);
+            toastTimer = setTimeout(hideToast, 5500);
+        }
+
+        function hideToast() {
+            const box = document.getElementById('toast-box');
+            if (box) box.classList.add('hidden');
+        }
+
+        function openResetModal() {
+            document.getElementById('reset-modal').classList.remove('hidden');
+        }
+
+        function closeResetModal() {
+            document.getElementById('reset-modal').classList.add('hidden');
+        }
+
+        function confirmResetTest() {
+            state.part1Answers = {};
+            state.part2Answers = {};
+            renderPart1();
+            renderPart2();
+            updateCounters();
+            closeResetModal();
+            goToView('home');
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/[&<>"']/g, function (m) {
+                return ({
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#39;'
+                })[m];
+            });
+        }
+    </script>
+</body>
+</html>
