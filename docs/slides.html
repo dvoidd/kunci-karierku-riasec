@@ -2,10 +2,10 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Rancangan Media Bimbingan dan Konseling Berbasis ICT</title>
+    <title>Rancangan Media Bimbingan dan Konseling Berbasis ICT - Sarah Shafa Zahrani</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @page {
             size: 13.333in 7.5in;
@@ -13,20 +13,19 @@
         }
 
         :root {
-            --bg-canvas: #EEF2F7;
+            --bg-canvas: #F4F7FB;
             --bg-white: #FFFFFF;
-            --bg-gray-soft: #F8FAFC;
-            --bg-gray-pastel: #E2E8F0;
-            --border-gray: #CBD5E1;
+            --bg-gray: #F1F5F9;
+            --border-gray: #E2E8F0;
 
-            --blue-dark: #1E3A8A;
-            --blue-primary: #2563EB;
-            --blue-pastel: #DBEAFE;
-            --blue-ice: #EFF6FF;
-            --blue-border: #93C5FD;
+            --pastel-blue: #DCEBFE;
+            --pastel-blue-soft: #EFF6FF;
+            --pastel-blue-mid: #93C5FD;
+            --blue-accent: #3B82F6;
+            --blue-ink: #1E3A8A;
 
-            --ink-dark: #0F172A;
-            --ink-body: #334155;
+            --ink-dark: #1E293B;
+            --ink-body: #475569;
             --ink-muted: #64748B;
         }
 
@@ -39,7 +38,7 @@
         html, body {
             margin: 0;
             padding: 0;
-            background-color: #CBD5E1;
+            background-color: #E2E8F0;
             font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
             color: var(--ink-dark);
         }
@@ -62,26 +61,26 @@
             break-after: auto;
         }
 
-        /* Header Bar Gaya PowerPoint Modern (Biru - Putih - Abu Pastel) */
-        .ppt-header {
-            background-color: var(--bg-white);
-            border-bottom: 2px solid var(--blue-pastel);
-            padding: 0.34in 0.62in 0.26in;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            position: relative;
-        }
-
-        .ppt-header::before {
+        /* Minimalist Top Pastel Blue Line */
+        .slide::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, var(--blue-dark) 0%, var(--blue-primary) 65%, var(--blue-border) 100%);
+            height: 5px;
+            background-color: var(--pastel-blue-mid);
+        }
+
+        /* Minimalist Header */
+        .ppt-header {
+            padding: 0.42in 0.72in 0.2in;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 1px solid var(--border-gray);
+            background-color: var(--bg-white);
         }
 
         .head-left {
@@ -93,120 +92,122 @@
         .comp-pill {
             display: inline-block;
             align-self: flex-start;
-            font-size: 11.5px;
-            font-weight: 700;
-            letter-spacing: 0.05em;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
-            color: var(--blue-dark);
-            background-color: var(--blue-pastel);
-            border: 1px solid var(--blue-border);
+            color: var(--blue-ink);
+            background-color: var(--pastel-blue);
             padding: 4px 12px;
-            border-radius: 6px;
+            border-radius: 999px;
         }
 
         .slide-title {
             margin: 0;
-            font-size: 28px;
-            font-weight: 800;
-            line-height: 1.18;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.2;
             color: var(--ink-dark);
             letter-spacing: -0.015em;
         }
 
-        .head-right-tag {
-            background-color: var(--bg-gray-soft);
-            border: 1px solid var(--border-gray);
-            border-radius: 8px;
-            padding: 8px 14px;
-            text-align: right;
+        .head-right-meta {
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 500;
             color: var(--ink-muted);
-            line-height: 1.35;
-            flex-shrink: 0;
+            text-align: right;
+            padding-bottom: 2px;
         }
 
-        .head-right-tag strong {
-            display: block;
-            color: var(--blue-dark);
-            font-size: 12.5px;
-        }
-
-        /* Body Area */
+        /* Body */
         .ppt-body {
             flex: 1;
-            padding: 0.32in 0.62in 0.22in;
+            padding: 0.34in 0.72in 0.26in;
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 18px;
         }
 
-        /* Footer Bar */
+        /* Minimalist Footer */
         .ppt-footer {
-            background-color: var(--bg-white);
-            border-top: 1px solid var(--border-gray);
-            padding: 0.14in 0.62in;
+            padding: 0.16in 0.72in;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 12px;
+            font-size: 11.5px;
             color: var(--ink-muted);
+            background-color: var(--bg-white);
+            border-top: 1px solid var(--border-gray);
         }
 
         .page-badge {
-            font-weight: 700;
-            color: var(--blue-dark);
-            background-color: var(--blue-pastel);
-            border: 1px solid var(--blue-border);
+            font-weight: 600;
+            color: var(--blue-ink);
+            background-color: var(--pastel-blue);
             padding: 3px 12px;
             border-radius: 999px;
         }
 
-        /* Cards & Grids */
+        /* Minimalist Cards */
         .card {
             background-color: var(--bg-white);
             border: 1px solid var(--border-gray);
             border-radius: 12px;
-            padding: 22px 24px;
-            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+            padding: 24px 26px;
         }
 
-        .card-blue-top {
+        .card-pastel {
+            background-color: var(--pastel-blue-soft);
+            border: 1px solid var(--pastel-blue);
+        }
+
+        .card-top-blue {
             position: relative;
             overflow: hidden;
             padding-top: 26px;
         }
 
-        .card-blue-top::before {
+        .card-top-blue::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 5px;
-            background-color: var(--blue-primary);
+            height: 4px;
+            background-color: var(--pastel-blue-mid);
         }
 
-        .card-gray-top {
+        .card-top-gray {
             position: relative;
             overflow: hidden;
             padding-top: 26px;
         }
 
-        .card-gray-top::before {
+        .card-top-gray::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 5px;
-            background-color: #64748B;
+            height: 4px;
+            background-color: #CBD5E1;
         }
 
-        .card-ice {
-            background-color: var(--blue-ice);
-            border: 1px solid var(--blue-border);
+        .inset-left-bar {
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .inset-left-bar::before {
+            content: "";
+            position: absolute;
+            top: 18px;
+            bottom: 18px;
+            left: 16px;
+            width: 4px;
+            border-radius: 999px;
+            background-color: var(--pastel-blue-mid);
         }
 
         .grid-2 {
@@ -239,19 +240,19 @@
 
         .card-h {
             margin: 0 0 10px;
-            font-size: 18px;
+            font-size: 17.5px;
             font-weight: 700;
-            color: var(--blue-dark);
+            color: var(--ink-dark);
         }
 
-        .card-h.slate {
-            color: var(--ink-dark);
+        .card-h.blue {
+            color: var(--blue-ink);
         }
 
         .card-p {
             margin: 0;
             font-size: 14.5px;
-            line-height: 1.6;
+            line-height: 1.62;
             color: var(--ink-body);
         }
 
@@ -261,43 +262,43 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 13px;
         }
 
         .clean-list li {
             display: flex;
             align-items: flex-start;
-            gap: 11px;
+            gap: 12px;
             font-size: 14.5px;
-            line-height: 1.55;
+            line-height: 1.58;
             color: var(--ink-dark);
         }
 
         .dot-blue {
-            width: 8px;
-            height: 8px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
-            background-color: var(--blue-primary);
+            background-color: var(--blue-accent);
             margin-top: 8px;
             flex-shrink: 0;
         }
 
         .dot-gray {
-            width: 8px;
-            height: 8px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
-            background-color: #64748B;
+            background-color: #94A3B8;
             margin-top: 8px;
             flex-shrink: 0;
         }
 
         .num-badge {
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             border-radius: 7px;
-            background-color: var(--blue-primary);
-            color: #FFFFFF;
-            font-size: 13.5px;
+            background-color: var(--pastel-blue);
+            color: var(--blue-ink);
+            font-size: 13px;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -306,29 +307,111 @@
             margin-top: 2px;
         }
 
-        .num-badge.slate {
-            background-color: #475569;
+        .num-badge.gray {
+            background-color: var(--bg-gray);
+            color: var(--ink-dark);
+            border: 1px solid var(--border-gray);
         }
 
-        /* Status Box on Slide 1 */
-        .status-box {
-            background-color: var(--blue-ice);
-            border: 1.5px solid var(--blue-border);
+        /* Cover & Closing Minimalist Layout */
+        .cover-wrap {
+            flex: 1;
+            padding: 0.65in 0.85in;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 60%, #F1F5F9 100%);
+        }
+
+        .cover-tag {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--blue-ink);
+            background-color: var(--pastel-blue);
+            padding: 6px 14px;
+            border-radius: 999px;
+            margin-bottom: 20px;
+        }
+
+        .cover-title {
+            margin: 0 0 12px;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.16;
+            letter-spacing: -0.02em;
+            color: var(--ink-dark);
+            max-width: 9.5in;
+        }
+
+        .cover-sub {
+            margin: 0 0 34px;
+            font-size: 17px;
+            line-height: 1.55;
+            color: var(--ink-body);
+            max-width: 8.2in;
+        }
+
+        .presenter-card {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-gray);
             border-radius: 12px;
+            padding: 20px 26px;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 36px;
+            position: relative;
+            padding-left: 34px;
+        }
+
+        .presenter-card::before {
+            content: "";
+            position: absolute;
+            top: 16px;
+            bottom: 16px;
+            left: 16px;
+            width: 4px;
+            border-radius: 999px;
+            background-color: var(--pastel-blue-mid);
+        }
+
+        .presenter-item span {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--ink-muted);
+            margin-bottom: 4px;
+        }
+
+        .presenter-item strong {
+            font-size: 15.5px;
+            font-weight: 700;
+            color: var(--ink-dark);
+        }
+
+        /* Status & Spec on Komponen 1 */
+        .status-box {
+            background-color: var(--pastel-blue-soft);
+            border: 1px solid var(--pastel-blue);
+            border-radius: 10px;
             padding: 18px 20px;
             margin-bottom: 14px;
         }
 
         .status-label {
             display: inline-block;
-            font-size: 11.5px;
+            font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
-            color: #FFFFFF;
-            background-color: var(--blue-primary);
+            letter-spacing: 0.05em;
+            color: var(--blue-ink);
+            background-color: var(--pastel-blue);
             padding: 3px 10px;
-            border-radius: 5px;
+            border-radius: 999px;
             margin-bottom: 8px;
         }
 
@@ -337,7 +420,7 @@
             font-size: 15px;
             font-weight: 600;
             line-height: 1.5;
-            color: var(--blue-dark);
+            color: var(--blue-ink);
         }
 
         .spec-table {
@@ -347,7 +430,7 @@
         }
 
         .spec-row {
-            background-color: var(--bg-gray-soft);
+            background-color: var(--bg-gray);
             border: 1px solid var(--border-gray);
             border-radius: 8px;
             padding: 11px 14px;
@@ -355,29 +438,26 @@
 
         .spec-row span {
             display: block;
-            font-size: 11.5px;
-            font-weight: 700;
+            font-size: 11px;
+            font-weight: 600;
             color: var(--ink-muted);
             text-transform: uppercase;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.04em;
             margin-bottom: 2px;
         }
 
         .spec-row strong {
             font-size: 14px;
+            font-weight: 600;
             color: var(--ink-dark);
         }
 
-        /* Slide 2 Nama Media Hero + RIASEC Strip */
+        /* Nama Media Banner & RIASEC Strip */
         .name-banner {
             background-color: var(--bg-white);
             border: 1px solid var(--border-gray);
             border-radius: 12px;
-            padding: 22px 26px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
+            padding: 22px 28px 22px 34px;
             position: relative;
         }
 
@@ -386,27 +466,23 @@
             position: absolute;
             top: 16px;
             bottom: 16px;
-            left: 14px;
-            width: 5px;
+            left: 16px;
+            width: 4px;
             border-radius: 999px;
-            background-color: var(--blue-primary);
-        }
-
-        .name-banner-inner {
-            padding-left: 14px;
+            background-color: var(--pastel-blue-mid);
         }
 
         .name-main {
             margin: 0 0 4px;
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--blue-dark);
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--blue-ink);
         }
 
         .name-sub {
             margin: 0;
-            font-size: 15.5px;
-            font-weight: 600;
+            font-size: 15px;
+            font-weight: 500;
             color: var(--ink-body);
         }
 
@@ -424,9 +500,9 @@
         }
 
         .riasec-chip.blue {
-            background-color: var(--blue-ice);
-            border-color: var(--blue-border);
-            color: var(--blue-dark);
+            background-color: var(--pastel-blue-soft);
+            border-color: var(--pastel-blue);
+            color: var(--blue-ink);
         }
 
         .riasec-chip.gray {
@@ -437,15 +513,15 @@
 
         .riasec-chip strong {
             display: block;
-            font-size: 20px;
-            font-weight: 800;
+            font-size: 19px;
+            font-weight: 700;
             line-height: 1.1;
         }
 
         .riasec-chip span {
             display: block;
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 500;
             margin-top: 3px;
             color: var(--ink-body);
         }
@@ -459,28 +535,28 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
         }
 
         .step-badge {
             display: inline-block;
-            font-size: 11.5px;
-            font-weight: 700;
+            font-size: 11px;
+            font-weight: 600;
             padding: 4px 11px;
-            border-radius: 6px;
-            background-color: var(--blue-pastel);
-            color: var(--blue-dark);
+            border-radius: 999px;
+            background-color: var(--pastel-blue);
+            color: var(--blue-ink);
             margin-bottom: 12px;
         }
 
         .step-badge.gray {
-            background-color: var(--bg-gray-pastel);
+            background-color: var(--bg-gray);
             color: var(--ink-dark);
+            border: 1px solid var(--border-gray);
         }
 
         .step-title {
             margin: 0 0 9px;
-            font-size: 17px;
+            font-size: 16.5px;
             font-weight: 700;
             color: var(--ink-dark);
         }
@@ -496,42 +572,103 @@
             margin-top: 16px;
             padding-top: 10px;
             border-top: 1px dashed var(--border-gray);
-            font-size: 12.5px;
-            font-weight: 700;
-            color: var(--blue-primary);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--blue-ink);
         }
 
         .callout-bar {
             padding: 14px 18px;
-            background-color: var(--blue-ice);
-            border: 1px solid var(--blue-border);
+            background-color: var(--pastel-blue-soft);
+            border: 1px solid var(--pastel-blue);
             border-radius: 10px;
             font-size: 14px;
             line-height: 1.5;
             color: var(--ink-dark);
         }
 
-        .inset-left-card {
-            position: relative;
-            padding-left: 30px;
+        /* Closing Slide */
+        .thanks-wrap {
+            flex: 1;
+            padding: 0.7in 0.85in;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 55%, #F1F5F9 100%);
         }
 
-        .inset-left-card::before {
-            content: "";
-            position: absolute;
-            top: 16px;
-            bottom: 16px;
-            left: 14px;
-            width: 4px;
-            border-radius: 999px;
-            background-color: var(--blue-primary);
+        .thanks-title {
+            margin: 0 0 12px;
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--blue-ink);
+        }
+
+        .thanks-sub {
+            margin: 0 0 30px;
+            font-size: 17px;
+            color: var(--ink-body);
+            max-width: 6.8in;
+            line-height: 1.55;
+        }
+
+        .thanks-card {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 18px 32px;
+            font-size: 14.5px;
+            color: var(--ink-dark);
+        }
+
+        .thanks-card strong {
+            display: block;
+            font-size: 16px;
+            color: var(--blue-ink);
+            margin-bottom: 4px;
         }
     </style>
 </head>
 <body>
 
     <!-- =========================================================
-         SLIDE 1: KOMPONEN 1 - JENIS MEDIA (TANPA NAMA MEDIA)
+         SLIDE 1: PERKENALAN / SAMPUL
+    ========================================================== -->
+    <section class="slide">
+        <div class="cover-wrap">
+            <span class="cover-tag">Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
+            <h1 class="cover-title">Pengembangan Media Bimbingan dan Konseling Berbasis ICT</h1>
+            <p class="cover-sub">
+                Rancangan konsep media asesmen minat karier berbasis web statis sebagai pendamping permainan Kuartet RIASEC pada layanan Bimbingan dan Konseling.
+            </p>
+
+            <div class="presenter-card">
+                <div class="presenter-item">
+                    <span>Nama</span>
+                    <strong>Sarah Shafa Zahrani</strong>
+                </div>
+                <div class="presenter-item">
+                    <span>NIM</span>
+                    <strong>260404301043</strong>
+                </div>
+                <div class="presenter-item">
+                    <span>Program Studi</span>
+                    <strong>Magister Bimbingan dan Konseling, FIP UNM</strong>
+                </div>
+            </div>
+        </div>
+
+        <footer class="ppt-footer">
+            <span>Magister Bimbingan dan Konseling - FIP UNM</span>
+            <span class="page-badge">1 / 10</span>
+        </footer>
+    </section>
+
+    <!-- =========================================================
+         SLIDE 2: KOMPONEN 1 - JENIS MEDIA
     ========================================================== -->
     <section class="slide">
         <header class="ppt-header">
@@ -539,18 +676,15 @@
                 <span class="comp-pill">Komponen 1</span>
                 <h1 class="slide-title">Jenis Media Bimbingan dan Konseling</h1>
             </div>
-            <div class="head-right-tag">
-                <strong>Media BK Berbasis ICT</strong>
-                <span>Tahap Prototipe</span>
-            </div>
+            <div class="head-right-meta">Rancangan Media BK Berbasis ICT</div>
         </header>
 
         <div class="ppt-body">
             <div class="grid-2-asym">
-                <div class="card card-blue-top">
-                    <h2 class="card-h">Aplikasi Web Interaktif Statis</h2>
+                <div class="card card-top-blue">
+                    <h2 class="card-h blue">Aplikasi Web Interaktif Statis</h2>
                     <p class="card-p" style="margin-bottom: 16px;">
-                        Media dikembangkan dalam bentuk <strong>aplikasi web interaktif statis</strong> (<em>single-file web application</em>) yang dapat dibuka langsung melalui peramban (<em>browser</em>) tanpa perlu menginstal aplikasi tambahan.
+                        Media dikembangkan dalam bentuk <strong>aplikasi web interaktif statis</strong> yang dapat dibuka langsung melalui peramban (<em>browser</em>) tanpa perlu menginstal aplikasi tambahan.
                     </p>
                     <ul class="clean-list">
                         <li>
@@ -568,7 +702,7 @@
                     </ul>
                 </div>
 
-                <div class="card card-gray-top">
+                <div class="card card-top-gray">
                     <div class="status-box">
                         <span class="status-label">Status Prototipe</span>
                         <p class="status-text">
@@ -579,7 +713,7 @@
                     <div class="spec-table">
                         <div class="spec-row">
                             <span>Bentuk Media</span>
-                            <strong>Aplikasi Web Statis (HTML, CSS, JavaScript)</strong>
+                            <strong>Aplikasi Web Statis</strong>
                         </div>
                         <div class="spec-row">
                             <span>Akses Pengguna</span>
@@ -596,12 +730,12 @@
 
         <footer class="ppt-footer">
             <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
-            <span class="page-badge">1 / 8</span>
+            <span class="page-badge">2 / 10</span>
         </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 2: KOMPONEN 2 - NAMA MEDIA
+         SLIDE 3: KOMPONEN 2 - NAMA MEDIA
     ========================================================== -->
     <section class="slide">
         <header class="ppt-header">
@@ -609,30 +743,25 @@
                 <span class="comp-pill">Komponen 2</span>
                 <h1 class="slide-title">Nama Media</h1>
             </div>
-            <div class="head-right-tag">
-                <strong>Media BK Berbasis ICT</strong>
-                <span>Kunci Karierku (RIASEC)</span>
-            </div>
+            <div class="head-right-meta">Kunci Karierku (RIASEC)</div>
         </header>
 
         <div class="ppt-body">
             <div class="name-banner">
-                <div class="name-banner-inner">
-                    <h2 class="name-main">Kunci Karierku (RIASEC)</h2>
-                    <p class="name-sub">Tes Kunci Karir Holland - Pendamping Kuartet RIASEC</p>
-                </div>
+                <h2 class="name-main">Kunci Karierku (RIASEC)</h2>
+                <p class="name-sub">Tes Kunci Karir Holland - Pendamping Kuartet RIASEC</p>
             </div>
 
             <div class="grid-2">
-                <div class="card card-blue-top">
-                    <h3 class="card-h">Makna &ldquo;Kunci Karierku&rdquo;</h3>
+                <div class="card card-top-blue">
+                    <h3 class="card-h blue">Makna &ldquo;Kunci Karierku&rdquo;</h3>
                     <p class="card-p">
                         Menggambarkan fungsi media sebagai alat bantu peserta didik menemukan &ldquo;kunci&rdquo; kecenderungan minat dan kepribadian kariernya secara mandiri sebelum menentukan pilihan studi atau pekerjaan.
                     </p>
                 </div>
 
-                <div class="card card-gray-top">
-                    <h3 class="card-h slate">Makna &ldquo;Pendamping Kuartet RIASEC&rdquo;</h3>
+                <div class="card card-top-gray">
+                    <h3 class="card-h">Makna &ldquo;Pendamping Kuartet RIASEC&rdquo;</h3>
                     <p class="card-p">
                         Menunjukkan peran media sebagai tahap asesmen awal yang terhubung langsung sebelum peserta didik memainkan kartu edukasi <strong>Kuartet RIASEC</strong> bersama kelompok di kelas.
                     </p>
@@ -651,12 +780,12 @@
 
         <footer class="ppt-footer">
             <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
-            <span class="page-badge">2 / 8</span>
+            <span class="page-badge">3 / 10</span>
         </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 3: KOMPONEN 3 - SASARAN PESERTA DIDIK
+         SLIDE 4: KOMPONEN 3 - SASARAN PESERTA DIDIK
     ========================================================== -->
     <section class="slide">
         <header class="ppt-header">
@@ -664,37 +793,34 @@
                 <span class="comp-pill">Komponen 3</span>
                 <h1 class="slide-title">Sasaran Peserta Didik</h1>
             </div>
-            <div class="head-right-tag">
-                <strong>Media BK Berbasis ICT</strong>
-                <span>Kunci Karierku (RIASEC)</span>
-            </div>
+            <div class="head-right-meta">Kunci Karierku (RIASEC)</div>
         </header>
 
         <div class="ppt-body">
-            <div class="card card-ice inset-left-card">
-                <h2 class="card-h" style="margin-bottom: 6px;">Jenjang Sasaran Utama: SMA / MA Sederajat</h2>
+            <div class="card card-pastel inset-left-bar">
+                <h2 class="card-h blue" style="margin-bottom: 6px;">Jenjang Sasaran Utama: SMA / MA Sederajat</h2>
                 <p class="card-p" style="color: var(--ink-dark);">
                     Dirancang khusus untuk peserta didik tingkat <strong>Sekolah Menengah Atas / Madrasah Aliyah (Kelas X, XI, dan XII)</strong> yang sedang mempersiapkan pilihan peminatan studi lanjut maupun arah karier.
                 </p>
             </div>
 
             <div class="grid-3">
-                <div class="card card-blue-top">
-                    <h3 class="card-h">Tugas Perkembangan Karier</h3>
+                <div class="card card-top-blue">
+                    <h3 class="card-h blue">Tugas Perkembangan Karier</h3>
                     <p class="card-p">
                         Siswa SMA/MA berada pada fase eksplorasi karier: mulai memetakan minat pribadi, memilih mata pelajaran peminatan, serta merencanakan studi lanjut atau dunia kerja.
                     </p>
                 </div>
 
-                <div class="card card-gray-top">
-                    <h3 class="card-h slate">Karakteristik Belajar</h3>
+                <div class="card card-top-gray">
+                    <h3 class="card-h">Karakteristik Belajar</h3>
                     <p class="card-p">
                         Remaja usia 15-18 tahun lebih antusias terhadap asesmen yang interaktif, visual, terstruktur, dan terhubung langsung dengan permainan kelompok Kuartet RIASEC.
                     </p>
                 </div>
 
-                <div class="card card-blue-top">
-                    <h3 class="card-h">Kesesuaian Akses ICT</h3>
+                <div class="card card-top-blue">
+                    <h3 class="card-h blue">Kesesuaian Akses ICT</h3>
                     <p class="card-p">
                         Ukuran file sangat ringan dan tanpa ketergantungan server berat, sehingga tetap lancar diakses siswa melalui ponsel maupun komputer sekolah dengan koneksi terbatas.
                     </p>
@@ -704,12 +830,12 @@
 
         <footer class="ppt-footer">
             <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
-            <span class="page-badge">3 / 8</span>
+            <span class="page-badge">4 / 10</span>
         </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 4: KOMPONEN 4 - TUJUAN MEDIA
+         SLIDE 5: KOMPONEN 4 - TUJUAN MEDIA
     ========================================================== -->
     <section class="slide">
         <header class="ppt-header">
@@ -717,22 +843,19 @@
                 <span class="comp-pill">Komponen 4</span>
                 <h1 class="slide-title">Tujuan Media dalam Layanan BK</h1>
             </div>
-            <div class="head-right-tag">
-                <strong>Media BK Berbasis ICT</strong>
-                <span>Kunci Karierku (RIASEC)</span>
-            </div>
+            <div class="head-right-meta">Kunci Karierku (RIASEC)</div>
         </header>
 
         <div class="ppt-body">
-            <div class="card inset-left-card">
-                <h2 class="card-h" style="margin-bottom: 6px;">Tujuan Umum Layanan Bimbingan Karier</h2>
+            <div class="card inset-left-bar">
+                <h2 class="card-h blue" style="margin-bottom: 6px;">Tujuan Umum Layanan Bimbingan Karier</h2>
                 <p class="card-p" style="color: var(--ink-dark);">
                     Membantu peserta didik mengungkap proses penyesuaian diri serta mengidentifikasi kecenderungan tipe kepribadian dan pilihan pekerjaan berdasarkan teori <strong>John L. Holland (RIASEC)</strong> sebelum bermain Kuartet RIASEC.
                 </p>
             </div>
 
             <div class="grid-2">
-                <div class="card card-blue-top">
+                <div class="card card-top-blue">
                     <ul class="clean-list">
                         <li>
                             <span class="num-badge">1</span>
@@ -751,17 +874,17 @@
                     </ul>
                 </div>
 
-                <div class="card card-gray-top">
+                <div class="card card-top-gray">
                     <ul class="clean-list">
                         <li>
-                            <span class="num-badge slate">3</span>
+                            <span class="num-badge gray">3</span>
                             <div>
                                 <strong>Pengenalan Profesi Kuartet RIASEC</strong><br>
                                 <span class="card-p">Membekali siswa pemahaman ciri-ciri profesi nyata di 6 kategori agar siap berinteraksi saat permainan Kuartet di kelas.</span>
                             </div>
                         </li>
                         <li>
-                            <span class="num-badge slate">4</span>
+                            <span class="num-badge gray">4</span>
                             <div>
                                 <strong>Dasar Konseling &amp; Perencanaan Karier</strong><br>
                                 <span class="card-p">Menyediakan lembar hasil cetak/PDF sebagai bahan diskusi lanjutan antara siswa dan Guru BK dalam layanan klasikal maupun individual.</span>
@@ -774,12 +897,12 @@
 
         <footer class="ppt-footer">
             <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
-            <span class="page-badge">4 / 8</span>
+            <span class="page-badge">5 / 10</span>
         </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 5: KOMPONEN 5 - MANFAAT MEDIA
+         SLIDE 6: KOMPONEN 5 - MANFAAT MEDIA
     ========================================================== -->
     <section class="slide">
         <header class="ppt-header">
@@ -787,16 +910,13 @@
                 <span class="comp-pill">Komponen 5</span>
                 <h1 class="slide-title">Manfaat Praktis Media</h1>
             </div>
-            <div class="head-right-tag">
-                <strong>Media BK Berbasis ICT</strong>
-                <span>Kunci Karierku (RIASEC)</span>
-            </div>
+            <div class="head-right-meta">Kunci Karierku (RIASEC)</div>
         </header>
 
         <div class="ppt-body">
             <div class="grid-2">
-                <div class="card card-blue-top">
-                    <h2 class="card-h">Bagi Konselor / Guru BK</h2>
+                <div class="card card-top-blue">
+                    <h2 class="card-h blue">Bagi Konselor / Guru BK</h2>
                     <ul class="clean-list" style="margin-top: 14px;">
                         <li><span class="dot-blue"></span><span><strong>Efisiensi Skoring Otomatis:</strong> Menghilangkan kesalahan hitung manual pada Baris 1, Baris 2, dan Total Baris 3 untuk seluruh siswa.</span></li>
                         <li><span class="dot-blue"></span><span><strong>Visualisasi Profil Instan:</strong> Grafik batang-garis dan kode 3 huruf langsung tampil sehingga Guru BK cepat membaca kecenderungan siswa.</span></li>
@@ -805,8 +925,8 @@
                     </ul>
                 </div>
 
-                <div class="card card-gray-top">
-                    <h2 class="card-h slate">Bagi Peserta Didik</h2>
+                <div class="card card-top-gray">
+                    <h2 class="card-h">Bagi Peserta Didik</h2>
                     <ul class="clean-list" style="margin-top: 14px;">
                         <li><span class="dot-gray"></span><span><strong>Mengenal Potensi Diri Secara Mandiri:</strong> Siswa langsung mengetahui 3 tipe kepribadian karier terkuatnya beserta penjelasan yang jelas.</span></li>
                         <li><span class="dot-gray"></span><span><strong>Belajar Profesi Tanpa Bosan:</strong> Eksplorasi ragam profesi dan ciri-cirinya terasa lebih menarik sebelum bermain kartu bersama teman.</span></li>
@@ -819,12 +939,12 @@
 
         <footer class="ppt-footer">
             <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
-            <span class="page-badge">5 / 8</span>
+            <span class="page-badge">6 / 10</span>
         </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 6: KOMPONEN 6 - DESKRIPSI RANCANGAN MEDIA (TANPA "24 KARTU")
+         SLIDE 7: KOMPONEN 6 - DESKRIPSI RANCANGAN MEDIA
     ========================================================== -->
     <section class="slide">
         <header class="ppt-header">
@@ -832,10 +952,7 @@
                 <span class="comp-pill">Komponen 6</span>
                 <h1 class="slide-title">Deskripsi Rancangan Media &amp; Fitur Utama</h1>
             </div>
-            <div class="head-right-tag">
-                <strong>Media BK Berbasis ICT</strong>
-                <span>Kunci Karierku (RIASEC)</span>
-            </div>
+            <div class="head-right-meta">Kunci Karierku (RIASEC)</div>
         </header>
 
         <div class="ppt-body">
@@ -884,12 +1001,12 @@
 
         <footer class="ppt-footer">
             <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
-            <span class="page-badge">6 / 8</span>
+            <span class="page-badge">7 / 10</span>
         </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 7: KOMPONEN 7 - PROSEDUR PEMBUATAN (REVISI NONTEKNIS & TEKNIS AWAM)
+         SLIDE 8: KOMPONEN 7 - PROSEDUR PEMBUATAN
     ========================================================== -->
     <section class="slide">
         <header class="ppt-header">
@@ -897,16 +1014,13 @@
                 <span class="comp-pill">Komponen 7</span>
                 <h1 class="slide-title">Prosedur Pembuatan Media (Nonteknis &amp; Teknis)</h1>
             </div>
-            <div class="head-right-tag">
-                <strong>Media BK Berbasis ICT</strong>
-                <span>Kunci Karierku (RIASEC)</span>
-            </div>
+            <div class="head-right-meta">Kunci Karierku (RIASEC)</div>
         </header>
 
         <div class="ppt-body">
             <div class="grid-2">
-                <div class="card card-blue-top">
-                    <h2 class="card-h">A. Langkah Nonteknis (Konten &amp; Pedagogis)</h2>
+                <div class="card card-top-blue">
+                    <h2 class="card-h blue">A. Langkah Nonteknis (Konten &amp; Pedagogis)</h2>
                     <ul class="clean-list" style="margin-top: 14px;">
                         <li>
                             <span class="num-badge">1</span>
@@ -929,23 +1043,23 @@
                     </ul>
                 </div>
 
-                <div class="card card-gray-top">
-                    <h2 class="card-h slate">B. Langkah Teknis (Pengembangan)</h2>
+                <div class="card card-top-gray">
+                    <h2 class="card-h">B. Langkah Teknis (Pengembangan)</h2>
                     <ul class="clean-list" style="margin-top: 14px;">
                         <li>
-                            <span class="num-badge slate">1</span>
+                            <span class="num-badge gray">1</span>
                             <div>
                                 <strong>Merancang Tampilan Halaman:</strong> Menyusun tata letak halaman awal, lembar soal, dan halaman hasil agar rapi, jelas dibaca, dan nyaman dibuka di HP maupun komputer.
                             </div>
                         </li>
                         <li>
-                            <span class="num-badge slate">2</span>
+                            <span class="num-badge gray">2</span>
                             <div>
                                 <strong>Membuat Sistem Hitung &amp; Grafik Otomatis:</strong> Mengatur agar jawaban siswa langsung dihitung otomatis menjadi kode 3 huruf dominan, grafik profil, dan lembar hasil siap cetak PDF.
                             </div>
                         </li>
                         <li>
-                            <span class="num-badge slate">3</span>
+                            <span class="num-badge gray">3</span>
                             <div>
                                 <strong>Uji Coba &amp; Publikasi Tautan Web:</strong> Memeriksa seluruh tombol dan alur pengisian agar berjalan lancar, lalu mengunggahnya ke internet agar mudah dibuka lewat tautan web.
                             </div>
@@ -957,12 +1071,12 @@
 
         <footer class="ppt-footer">
             <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
-            <span class="page-badge">7 / 8</span>
+            <span class="page-badge">8 / 10</span>
         </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 8: KOMPONEN 8 - PROSEDUR PENGGUNAAN
+         SLIDE 9: KOMPONEN 8 - PROSEDUR PENGGUNAAN
     ========================================================== -->
     <section class="slide">
         <header class="ppt-header">
@@ -970,10 +1084,7 @@
                 <span class="comp-pill">Komponen 8</span>
                 <h1 class="slide-title">Prosedur Penggunaan dalam Layanan BK</h1>
             </div>
-            <div class="head-right-tag">
-                <strong>Media BK Berbasis ICT</strong>
-                <span>Kunci Karierku (RIASEC)</span>
-            </div>
+            <div class="head-right-meta">Kunci Karierku (RIASEC)</div>
         </header>
 
         <div class="ppt-body">
@@ -1022,7 +1133,30 @@
 
         <footer class="ppt-footer">
             <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
-            <span class="page-badge">8 / 8</span>
+            <span class="page-badge">9 / 10</span>
+        </footer>
+    </section>
+
+    <!-- =========================================================
+         SLIDE 10: TERIMA KASIH
+    ========================================================== -->
+    <section class="slide">
+        <div class="thanks-wrap">
+            <span class="cover-tag">Penutup</span>
+            <h1 class="thanks-title">Terima Kasih</h1>
+            <p class="thanks-sub">
+                Semoga rancangan media Bimbingan dan Konseling berbasis ICT ini dapat memberikan manfaat dalam layanan eksplorasi karier peserta didik.
+            </p>
+
+            <div class="thanks-card">
+                <strong>Sarah Shafa Zahrani</strong>
+                <span>NIM 260404301043 &middot; Magister Bimbingan dan Konseling, FIP UNM</span>
+            </div>
+        </div>
+
+        <footer class="ppt-footer">
+            <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
+            <span class="page-badge">10 / 10</span>
         </footer>
     </section>
 
