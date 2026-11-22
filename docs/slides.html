@@ -2,10 +2,10 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Presentasi Rancangan Media BK Berbasis ICT - Kunci Karierku (RIASEC)</title>
+    <title>Rancangan Media Bimbingan dan Konseling Berbasis ICT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         @page {
             size: 13.333in 7.5in;
@@ -13,29 +13,21 @@
         }
 
         :root {
-            --bg-paper: #FAF8F4;
-            --bg-surface: #FFFFFF;
-            --bg-subtle: #F3EFE7;
-            --border-soft: #E4DEC9;
-            --border-strong: #CFC7B4;
-            --ink-primary: #1E242B;
-            --ink-secondary: #434C59;
-            --ink-muted: #525D6B;
+            --bg-canvas: #EEF2F7;
+            --bg-white: #FFFFFF;
+            --bg-gray-soft: #F8FAFC;
+            --bg-gray-pastel: #E2E8F0;
+            --border-gray: #CBD5E1;
 
-            --accent: #1F4E5F;
-            --accent-soft: #EBF3F5;
-            --accent-border: #B7D1DA;
+            --blue-dark: #1E3A8A;
+            --blue-primary: #2563EB;
+            --blue-pastel: #DBEAFE;
+            --blue-ice: #EFF6FF;
+            --blue-border: #93C5FD;
 
-            --warm: #C86D3B;
-            --warm-soft: #FDF3EC;
-            --warm-border: #F0CBB2;
-
-            --r-bg: #EBF3F9; --r-border: #A9CBE3; --r-text: #185278;
-            --i-bg: #ECF5EE; --i-border: #A7D1B2; --i-text: #1F5C34;
-            --a-bg: #F4EEF8; --a-border: #CCB2DF; --a-text: #5B2C78;
-            --s-bg: #FDF2E6; --s-border: #EBBF8E; --s-text: #96470E;
-            --e-bg: #FCEEEF; --e-border: #E6B0BA; --e-text: #91233F;
-            --c-bg: #FBF6DF; --c-border: #DEC973; --c-text: #6B5104;
+            --ink-dark: #0F172A;
+            --ink-body: #334155;
+            --ink-muted: #64748B;
         }
 
         * {
@@ -47,18 +39,17 @@
         html, body {
             margin: 0;
             padding: 0;
-            background-color: #E5E0D5;
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            color: var(--ink-primary);
+            background-color: #CBD5E1;
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            color: var(--ink-dark);
         }
 
         .slide {
             width: 13.333in;
             height: 7.5in;
-            background-color: var(--bg-paper);
+            background-color: var(--bg-canvas);
             position: relative;
             overflow: hidden;
-            padding: 0.44in 0.6in 0.44in;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -71,170 +62,163 @@
             break-after: auto;
         }
 
-        /* Top accent strip */
-        .slide::before {
+        /* Header Bar Gaya PowerPoint Modern (Biru - Putih - Abu Pastel) */
+        .ppt-header {
+            background-color: var(--bg-white);
+            border-bottom: 2px solid var(--blue-pastel);
+            padding: 0.34in 0.62in 0.26in;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            position: relative;
+        }
+
+        .ppt-header::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 6px;
-            background: linear-gradient(90deg,
-                #185278 0%, #185278 16.6%,
-                #1F5C34 16.6%, #1F5C34 33.3%,
-                #5B2C78 33.3%, #5B2C78 50%,
-                #96470E 50%, #96470E 66.6%,
-                #91233F 66.6%, #91233F 83.3%,
-                #6B5104 83.3%, #6B5104 100%);
+            background: linear-gradient(90deg, var(--blue-dark) 0%, var(--blue-primary) 65%, var(--blue-border) 100%);
         }
 
-        /* Header & Footer */
-        .slide-head {
+        .head-left {
             display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 20px;
-            border-bottom: 1.5px solid var(--border-soft);
-            padding-bottom: 12px;
-            margin-bottom: 16px;
+            flex-direction: column;
+            gap: 6px;
         }
 
-        .slide-kicker {
+        .comp-pill {
             display: inline-block;
+            align-self: flex-start;
             font-size: 11.5px;
             font-weight: 700;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
-            color: var(--accent);
-            background-color: var(--accent-soft);
-            border: 1px solid var(--accent-border);
+            color: var(--blue-dark);
+            background-color: var(--blue-pastel);
+            border: 1px solid var(--blue-border);
             padding: 4px 12px;
-            border-radius: 999px;
-            margin-bottom: 6px;
-        }
-
-        .slide-kicker.warm {
-            color: var(--warm);
-            background-color: var(--warm-soft);
-            border-color: var(--warm-border);
+            border-radius: 6px;
         }
 
         .slide-title {
             margin: 0;
-            font-family: 'Lora', Georgia, serif;
             font-size: 28px;
-            font-weight: 700;
+            font-weight: 800;
             line-height: 1.18;
-            color: var(--ink-primary);
+            color: var(--ink-dark);
+            letter-spacing: -0.015em;
         }
 
-        .slide-brand-mini {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            flex-shrink: 0;
-            padding-top: 4px;
-        }
-
-        .mini-grid {
-            width: 30px;
-            height: 30px;
-            border-radius: 7px;
-            background-color: var(--accent-soft);
-            border: 1px solid var(--accent-border);
-            display: grid;
-            grid-template-columns: repeat(3, 5px);
-            grid-template-rows: repeat(2, 5px);
-            gap: 2.5px;
-            place-content: center;
-        }
-
-        .mini-grid span {
-            border-radius: 1.5px;
-            display: block;
-        }
-
-        .mini-brand-text {
+        .head-right-tag {
+            background-color: var(--bg-gray-soft);
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+            padding: 8px 14px;
+            text-align: right;
             font-size: 12px;
-            font-weight: 700;
-            color: var(--ink-secondary);
-            line-height: 1.25;
+            font-weight: 600;
+            color: var(--ink-muted);
+            line-height: 1.35;
+            flex-shrink: 0;
         }
 
-        .slide-body {
+        .head-right-tag strong {
+            display: block;
+            color: var(--blue-dark);
+            font-size: 12.5px;
+        }
+
+        /* Body Area */
+        .ppt-body {
             flex: 1;
+            padding: 0.32in 0.62in 0.22in;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            gap: 18px;
         }
 
-        .slide-foot {
+        /* Footer Bar */
+        .ppt-footer {
+            background-color: var(--bg-white);
+            border-top: 1px solid var(--border-gray);
+            padding: 0.14in 0.62in;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-top: 1px solid var(--border-soft);
-            padding-top: 10px;
-            margin-top: 14px;
             font-size: 12px;
             color: var(--ink-muted);
         }
 
-        .slide-num {
+        .page-badge {
             font-weight: 700;
-            color: var(--accent);
-            background-color: var(--accent-soft);
-            border: 1px solid var(--accent-border);
-            padding: 2px 11px;
+            color: var(--blue-dark);
+            background-color: var(--blue-pastel);
+            border: 1px solid var(--blue-border);
+            padding: 3px 12px;
             border-radius: 999px;
         }
 
-        /* Reusable Cards & Grids */
+        /* Cards & Grids */
         .card {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-soft);
-            border-radius: 14px;
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
             padding: 22px 24px;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
         }
 
-        .card-accent-top {
+        .card-blue-top {
             position: relative;
             overflow: hidden;
             padding-top: 26px;
         }
 
-        .card-accent-top::before {
+        .card-blue-top::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background-color: var(--accent);
+            height: 5px;
+            background-color: var(--blue-primary);
         }
 
-        .card-warm-top::before {
-            background-color: var(--warm);
-        }
-
-        .card-left-bar {
+        .card-gray-top {
             position: relative;
-            padding-left: 30px;
+            overflow: hidden;
+            padding-top: 26px;
         }
 
-        .card-left-bar::before {
+        .card-gray-top::before {
             content: "";
             position: absolute;
-            top: 16px;
-            bottom: 16px;
-            left: 14px;
-            width: 4px;
-            border-radius: 999px;
-            background-color: var(--accent);
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background-color: #64748B;
+        }
+
+        .card-ice {
+            background-color: var(--blue-ice);
+            border: 1px solid var(--blue-border);
         }
 
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .grid-2-asym {
+            display: grid;
+            grid-template-columns: 1.25fr 0.95fr;
             gap: 20px;
             align-items: stretch;
         }
@@ -255,17 +239,20 @@
 
         .card-h {
             margin: 0 0 10px;
-            font-family: 'Lora', Georgia, serif;
-            font-size: 18.5px;
+            font-size: 18px;
             font-weight: 700;
-            color: var(--ink-primary);
+            color: var(--blue-dark);
+        }
+
+        .card-h.slate {
+            color: var(--ink-dark);
         }
 
         .card-p {
             margin: 0;
             font-size: 14.5px;
-            line-height: 1.58;
-            color: var(--ink-secondary);
+            line-height: 1.6;
+            color: var(--ink-body);
         }
 
         .clean-list {
@@ -283,27 +270,32 @@
             gap: 11px;
             font-size: 14.5px;
             line-height: 1.55;
-            color: var(--ink-primary);
+            color: var(--ink-dark);
         }
 
-        .dot {
+        .dot-blue {
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background-color: var(--accent);
+            background-color: var(--blue-primary);
             margin-top: 8px;
             flex-shrink: 0;
         }
 
-        .dot.warm {
-            background-color: var(--warm);
+        .dot-gray {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #64748B;
+            margin-top: 8px;
+            flex-shrink: 0;
         }
 
-        .num-chip {
+        .num-badge {
             width: 28px;
             height: 28px;
             border-radius: 7px;
-            background-color: var(--accent);
+            background-color: var(--blue-primary);
             color: #FFFFFF;
             font-size: 13.5px;
             font-weight: 700;
@@ -314,112 +306,139 @@
             margin-top: 2px;
         }
 
-        .num-chip.warm {
-            background-color: var(--warm);
+        .num-badge.slate {
+            background-color: #475569;
         }
 
-        /* Cover Slide Specific */
-        .cover-grid {
-            display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
-            gap: 28px;
-            align-items: center;
-            height: 100%;
-        }
-
-        .cover-title {
-            margin: 10px 0 10px;
-            font-family: 'Lora', Georgia, serif;
-            font-size: 42px;
-            font-weight: 700;
-            line-height: 1.14;
-            letter-spacing: -0.015em;
-            color: var(--ink-primary);
-        }
-
-        .cover-sub {
-            margin: 0 0 18px;
-            font-size: 17px;
-            line-height: 1.55;
-            color: var(--ink-secondary);
-        }
-
-        .proto-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: var(--warm-soft);
-            border: 1px solid var(--warm-border);
-            color: var(--warm);
-            font-size: 13px;
-            font-weight: 700;
-            padding: 6px 14px;
-            border-radius: 999px;
-            margin-bottom: 18px;
-        }
-
-        .cover-meta {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-soft);
+        /* Status Box on Slide 1 */
+        .status-box {
+            background-color: var(--blue-ice);
+            border: 1.5px solid var(--blue-border);
             border-radius: 12px;
-            padding: 16px 18px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-            font-size: 13.5px;
+            padding: 18px 20px;
+            margin-bottom: 14px;
         }
 
-        .cover-meta strong {
+        .status-label {
+            display: inline-block;
+            font-size: 11.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #FFFFFF;
+            background-color: var(--blue-primary);
+            padding: 3px 10px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+
+        .status-text {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.5;
+            color: var(--blue-dark);
+        }
+
+        .spec-table {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .spec-row {
+            background-color: var(--bg-gray-soft);
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+            padding: 11px 14px;
+        }
+
+        .spec-row span {
             display: block;
             font-size: 11.5px;
+            font-weight: 700;
             color: var(--ink-muted);
-            margin-bottom: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            margin-bottom: 2px;
         }
 
-        .shot-frame {
-            background-color: var(--bg-surface);
-            border: 1.5px solid var(--border-strong);
-            border-radius: 14px;
-            padding: 10px;
-            box-shadow: 0 8px 24px rgba(30, 36, 43, 0.08);
+        .spec-row strong {
+            font-size: 14px;
+            color: var(--ink-dark);
         }
 
-        .shot-frame img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-            border: 1px solid var(--border-soft);
+        /* Slide 2 Nama Media Hero + RIASEC Strip */
+        .name-banner {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 22px 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            position: relative;
         }
 
-        .shot-caption {
-            margin: 9px 4px 2px;
-            font-size: 12.5px;
+        .name-banner::before {
+            content: "";
+            position: absolute;
+            top: 16px;
+            bottom: 16px;
+            left: 14px;
+            width: 5px;
+            border-radius: 999px;
+            background-color: var(--blue-primary);
+        }
+
+        .name-banner-inner {
+            padding-left: 14px;
+        }
+
+        .name-main {
+            margin: 0 0 4px;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--blue-dark);
+        }
+
+        .name-sub {
+            margin: 0;
+            font-size: 15.5px;
             font-weight: 600;
-            color: var(--ink-secondary);
-            text-align: center;
+            color: var(--ink-body);
         }
 
-        /* RIASEC 6-chip strip */
         .riasec-strip {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 12px;
-            margin-top: 20px;
         }
 
         .riasec-chip {
             border-radius: 10px;
-            border: 1px solid;
-            padding: 11px 10px;
+            padding: 12px 10px;
             text-align: center;
+            border: 1px solid;
+        }
+
+        .riasec-chip.blue {
+            background-color: var(--blue-ice);
+            border-color: var(--blue-border);
+            color: var(--blue-dark);
+        }
+
+        .riasec-chip.gray {
+            background-color: var(--bg-white);
+            border-color: var(--border-gray);
+            color: var(--ink-dark);
         }
 
         .riasec-chip strong {
             display: block;
-            font-family: 'Lora', Georgia, serif;
-            font-size: 19px;
-            font-weight: 700;
+            font-size: 20px;
+            font-weight: 800;
             line-height: 1.1;
         }
 
@@ -428,17 +447,19 @@
             font-size: 12px;
             font-weight: 600;
             margin-top: 3px;
+            color: var(--ink-body);
         }
 
-        /* Flow step cards */
+        /* Step Cards */
         .step-card {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-soft);
-            border-radius: 14px;
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
             padding: 20px 18px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
         }
 
         .step-badge {
@@ -447,294 +468,281 @@
             font-weight: 700;
             padding: 4px 11px;
             border-radius: 6px;
-            background-color: var(--accent-soft);
-            color: var(--accent);
+            background-color: var(--blue-pastel);
+            color: var(--blue-dark);
             margin-bottom: 12px;
+        }
+
+        .step-badge.gray {
+            background-color: var(--bg-gray-pastel);
+            color: var(--ink-dark);
         }
 
         .step-title {
             margin: 0 0 9px;
-            font-family: 'Lora', Georgia, serif;
-            font-size: 17.5px;
+            font-size: 17px;
             font-weight: 700;
-            color: var(--ink-primary);
+            color: var(--ink-dark);
         }
 
         .step-desc {
             margin: 0;
             font-size: 14px;
             line-height: 1.58;
-            color: var(--ink-secondary);
+            color: var(--ink-body);
         }
 
         .step-foot {
             margin-top: 16px;
             padding-top: 10px;
-            border-top: 1px dashed var(--border-soft);
+            border-top: 1px dashed var(--border-gray);
             font-size: 12.5px;
             font-weight: 700;
-            color: var(--accent);
+            color: var(--blue-primary);
         }
 
         .callout-bar {
-            margin-top: 18px;
             padding: 14px 18px;
-            background-color: var(--accent-soft);
-            border: 1px solid var(--accent-border);
+            background-color: var(--blue-ice);
+            border: 1px solid var(--blue-border);
             border-radius: 10px;
             font-size: 14px;
             line-height: 1.5;
-            color: var(--ink-primary);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
+            color: var(--ink-dark);
         }
 
-        .callout-bar.warm {
-            background-color: var(--warm-soft);
-            border-color: var(--warm-border);
+        .inset-left-card {
+            position: relative;
+            padding-left: 30px;
         }
 
-        .dual-shots {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            align-items: stretch;
-        }
-
-        .dual-shots .shot-frame {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .dual-shots .shot-frame img {
-            width: 100%;
-            height: 3.95in;
-            object-fit: contain;
-            background-color: var(--bg-paper);
+        .inset-left-card::before {
+            content: "";
+            position: absolute;
+            top: 16px;
+            bottom: 16px;
+            left: 14px;
+            width: 4px;
+            border-radius: 999px;
+            background-color: var(--blue-primary);
         }
     </style>
 </head>
 <body>
 
     <!-- =========================================================
-         SLIDE 1: SAMPUL
+         SLIDE 1: KOMPONEN 1 - JENIS MEDIA (TANPA NAMA MEDIA)
     ========================================================== -->
     <section class="slide">
-        <div class="slide-body">
-            <div class="cover-grid">
-                <div>
-                    <span class="slide-kicker">Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
-                    <h1 class="cover-title">Kunci Karierku (RIASEC)</h1>
-                    <p class="cover-sub">
-                        Aplikasi Web Interaktif Tes Kunci Karir Holland sebagai Media Pendamping Permainan Kartu Kuartet RIASEC
+        <header class="ppt-header">
+            <div class="head-left">
+                <span class="comp-pill">Komponen 1</span>
+                <h1 class="slide-title">Jenis Media Bimbingan dan Konseling</h1>
+            </div>
+            <div class="head-right-tag">
+                <strong>Media BK Berbasis ICT</strong>
+                <span>Tahap Prototipe</span>
+            </div>
+        </header>
+
+        <div class="ppt-body">
+            <div class="grid-2-asym">
+                <div class="card card-blue-top">
+                    <h2 class="card-h">Aplikasi Web Interaktif Statis</h2>
+                    <p class="card-p" style="margin-bottom: 16px;">
+                        Media dikembangkan dalam bentuk <strong>aplikasi web interaktif statis</strong> (<em>single-file web application</em>) yang dapat dibuka langsung melalui peramban (<em>browser</em>) tanpa perlu menginstal aplikasi tambahan.
                     </p>
-
-                    <div class="proto-pill">
-                        Status Pengembangan: Tahap Prototipe Fungsional (Web Statis)
-                    </div>
-
-                    <div class="cover-meta">
-                        <div>
-                            <strong>Jenis &amp; Format Media</strong>
-                            <span>Aplikasi Web Statis (HTML5 / CSS3 / JS)</span>
-                        </div>
-                        <div>
-                            <strong>Sasaran Peserta Didik</strong>
-                            <span>Siswa SMA / MA Sederajat</span>
-                        </div>
-                        <div>
-                            <strong>Cakupan Instrumen</strong>
-                            <span>24 Pernyataan, 42 Profesi, 24 Kartu</span>
-                        </div>
-                        <div>
-                            <strong>Tautan Preview Prototipe</strong>
-                            <span>dvoidd.github.io/kunci-karierku-riasec</span>
-                        </div>
-                    </div>
+                    <ul class="clean-list">
+                        <li>
+                            <span class="dot-blue"></span>
+                            <span><strong>Lintas Perangkat:</strong> Tampilan menyesuaikan layar ponsel, tablet, maupun komputer sekolah secara otomatis.</span>
+                        </li>
+                        <li>
+                            <span class="dot-blue"></span>
+                            <span><strong>Fleksibel Daring &amp; Luring:</strong> Dapat diakses melalui tautan internet maupun dibuka langsung sebagai file lokal di perangkat.</span>
+                        </li>
+                        <li>
+                            <span class="dot-blue"></span>
+                            <span><strong>Ringan &amp; Praktis:</strong> Tidak memerlukan akun login atau server khusus sehingga mudah digunakan dalam layanan BK.</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="shot-frame">
-                    <img src="file:///home/orangepi/.hermes/cache/scratch/riasec_shots/01_home_desktop.png" alt="Tampilan Beranda Prototipe Kunci Karierku">
-                    <div class="shot-caption">Tampilan Beranda Prototipe Kunci Karierku (RIASEC)</div>
+                <div class="card card-gray-top">
+                    <div class="status-box">
+                        <span class="status-label">Status Prototipe</span>
+                        <p class="status-text">
+                            Versi awal belum pernah diaplikasikan dan memerlukan tahap uji coba.
+                        </p>
+                    </div>
+
+                    <div class="spec-table">
+                        <div class="spec-row">
+                            <span>Bentuk Media</span>
+                            <strong>Aplikasi Web Statis (HTML, CSS, JavaScript)</strong>
+                        </div>
+                        <div class="spec-row">
+                            <span>Akses Pengguna</span>
+                            <strong>Peramban HP, Laptop, atau Komputer Lab</strong>
+                        </div>
+                        <div class="spec-row">
+                            <span>Tahap Saat Ini</span>
+                            <strong>Prototipe Awal (Siap Uji Validasi &amp; Uji Coba)</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="slide-foot">
-            <span>Rancangan Media BK Berbasis ICT - Kunci Karierku (RIASEC)</span>
-            <span class="slide-num">1 / 10</span>
-        </div>
+        <footer class="ppt-footer">
+            <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
+            <span class="page-badge">1 / 8</span>
+        </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 2: POIN 1 & 2 - JENIS MEDIA & NAMA MEDIA
+         SLIDE 2: KOMPONEN 2 - NAMA MEDIA
     ========================================================== -->
     <section class="slide">
-        <div class="slide-head">
-            <div>
-                <span class="slide-kicker">Komponen 1 &amp; 2</span>
-                <h2 class="slide-title">Jenis Media dan Nama Media</h2>
+        <header class="ppt-header">
+            <div class="head-left">
+                <span class="comp-pill">Komponen 2</span>
+                <h1 class="slide-title">Nama Media</h1>
             </div>
-            <div class="slide-brand-mini">
-                <div class="mini-grid">
-                    <span style="background:#185278;"></span><span style="background:#1F5C34;"></span><span style="background:#5B2C78;"></span>
-                    <span style="background:#96470E;"></span><span style="background:#91233F;"></span><span style="background:#6B5104;"></span>
-                </div>
-                <div class="mini-brand-text">Kunci Karierku<br>RIASEC</div>
+            <div class="head-right-tag">
+                <strong>Media BK Berbasis ICT</strong>
+                <span>Kunci Karierku (RIASEC)</span>
             </div>
-        </div>
+        </header>
 
-        <div class="slide-body">
+        <div class="ppt-body">
+            <div class="name-banner">
+                <div class="name-banner-inner">
+                    <h2 class="name-main">Kunci Karierku (RIASEC)</h2>
+                    <p class="name-sub">Tes Kunci Karir Holland - Pendamping Kuartet RIASEC</p>
+                </div>
+            </div>
+
             <div class="grid-2">
-                <div class="card card-accent-top">
-                    <h3 class="card-h">1. Jenis Media</h3>
-                    <p class="card-p" style="margin-bottom: 14px;">
-                        <strong>Aplikasi Web Interaktif Statis</strong> (<em>Single-File Web Application</em>) berbasis HTML5, CSS3, dan JavaScript yang berjalan langsung di peramban tanpa server atau instalasi tambahan.
+                <div class="card card-blue-top">
+                    <h3 class="card-h">Makna &ldquo;Kunci Karierku&rdquo;</h3>
+                    <p class="card-p">
+                        Menggambarkan fungsi media sebagai alat bantu peserta didik menemukan &ldquo;kunci&rdquo; kecenderungan minat dan kepribadian kariernya secara mandiri sebelum menentukan pilihan studi atau pekerjaan.
                     </p>
-                    <ul class="clean-list">
-                        <li><span class="dot"></span><span><strong>Lintas Perangkat:</strong> Responsif dibuka melalui ponsel siswa, tablet, maupun komputer laboratorium sekolah.</span></li>
-                        <li><span class="dot"></span><span><strong>Fleksibel Daring &amp; Luring:</strong> Dapat diakses lewat tautan web (GitHub Pages) maupun dibuka langsung sebagai file lokal.</span></li>
-                        <li><span class="dot"></span><span><strong>Status Prototipe:</strong> Versi awal sudah berjalan penuh untuk uji coba konsep dan evaluasi sebelum implementasi luas.</span></li>
-                    </ul>
                 </div>
 
-                <div class="card card-accent-top card-warm-top">
-                    <h3 class="card-h">2. Nama Media</h3>
-                    <p class="card-p" style="margin-bottom: 14px;">
-                        <strong>Kunci Karierku (RIASEC)</strong><br>
-                        <em>Tes Kunci Karir Holland - Pendamping Kuartet RIASEC</em>
+                <div class="card card-gray-top">
+                    <h3 class="card-h slate">Makna &ldquo;Pendamping Kuartet RIASEC&rdquo;</h3>
+                    <p class="card-p">
+                        Menunjukkan peran media sebagai tahap asesmen awal yang terhubung langsung sebelum peserta didik memainkan kartu edukasi <strong>Kuartet RIASEC</strong> bersama kelompok di kelas.
                     </p>
-                    <ul class="clean-list">
-                        <li><span class="dot warm"></span><span><strong>Makna &ldquo;Kunci Karierku&rdquo;:</strong> Menggambarkan fungsi media sebagai alat bantu siswa menemukan kunci kecenderungan minat kariernya.</span></li>
-                        <li><span class="dot warm"></span><span><strong>Makna &ldquo;Pendamping Kuartet RIASEC&rdquo;:</strong> Menjadi tahap asesmen awal sebelum siswa memainkan kartu edukasi Kuartet RIASEC di kelas.</span></li>
-                        <li><span class="dot warm"></span><span><strong>Identitas Visual Ramah Siswa:</strong> Menggunakan palet kertas hangat, tipografi Lora + Inter, dan 6 warna pastel lembut.</span></li>
-                    </ul>
                 </div>
             </div>
 
             <div class="riasec-strip">
-                <div class="riasec-chip" style="background:var(--r-bg); border-color:var(--r-border); color:var(--r-text);">
-                    <strong>R</strong><span>Realistic</span>
-                </div>
-                <div class="riasec-chip" style="background:var(--i-bg); border-color:var(--i-border); color:var(--i-text);">
-                    <strong>I</strong><span>Investigative</span>
-                </div>
-                <div class="riasec-chip" style="background:var(--a-bg); border-color:var(--a-border); color:var(--a-text);">
-                    <strong>A</strong><span>Artistic</span>
-                </div>
-                <div class="riasec-chip" style="background:var(--s-bg); border-color:var(--s-border); color:var(--s-text);">
-                    <strong>S</strong><span>Social</span>
-                </div>
-                <div class="riasec-chip" style="background:var(--e-bg); border-color:var(--e-border); color:var(--e-text);">
-                    <strong>E</strong><span>Enterprising</span>
-                </div>
-                <div class="riasec-chip" style="background:var(--c-bg); border-color:var(--c-border); color:var(--c-text);">
-                    <strong>C</strong><span>Conventional</span>
-                </div>
+                <div class="riasec-chip blue"><strong>R</strong><span>Realistic</span></div>
+                <div class="riasec-chip gray"><strong>I</strong><span>Investigative</span></div>
+                <div class="riasec-chip blue"><strong>A</strong><span>Artistic</span></div>
+                <div class="riasec-chip gray"><strong>S</strong><span>Social</span></div>
+                <div class="riasec-chip blue"><strong>E</strong><span>Enterprising</span></div>
+                <div class="riasec-chip gray"><strong>C</strong><span>Conventional</span></div>
             </div>
         </div>
 
-        <div class="slide-foot">
-            <span>Rancangan Media BK Berbasis ICT - Kunci Karierku (RIASEC)</span>
-            <span class="slide-num">2 / 10</span>
-        </div>
+        <footer class="ppt-footer">
+            <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
+            <span class="page-badge">2 / 8</span>
+        </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 3: POIN 3 - SASARAN PESERTA DIDIK
+         SLIDE 3: KOMPONEN 3 - SASARAN PESERTA DIDIK
     ========================================================== -->
     <section class="slide">
-        <div class="slide-head">
-            <div>
-                <span class="slide-kicker">Komponen 3</span>
-                <h2 class="slide-title">Sasaran Peserta Didik</h2>
+        <header class="ppt-header">
+            <div class="head-left">
+                <span class="comp-pill">Komponen 3</span>
+                <h1 class="slide-title">Sasaran Peserta Didik</h1>
             </div>
-            <div class="slide-brand-mini">
-                <div class="mini-grid">
-                    <span style="background:#185278;"></span><span style="background:#1F5C34;"></span><span style="background:#5B2C78;"></span>
-                    <span style="background:#96470E;"></span><span style="background:#91233F;"></span><span style="background:#6B5104;"></span>
-                </div>
-                <div class="mini-brand-text">Kunci Karierku<br>RIASEC</div>
+            <div class="head-right-tag">
+                <strong>Media BK Berbasis ICT</strong>
+                <span>Kunci Karierku (RIASEC)</span>
             </div>
-        </div>
+        </header>
 
-        <div class="slide-body">
-            <div class="card" style="margin-bottom: 20px; background-color: var(--accent-soft); border-color: var(--accent-border);">
-                <h3 class="card-h" style="color: var(--accent); margin-bottom: 6px;">Jenjang Sasaran Utama: SMA / MA Sederajat</h3>
-                <p class="card-p" style="color: var(--ink-primary);">
+        <div class="ppt-body">
+            <div class="card card-ice inset-left-card">
+                <h2 class="card-h" style="margin-bottom: 6px;">Jenjang Sasaran Utama: SMA / MA Sederajat</h2>
+                <p class="card-p" style="color: var(--ink-dark);">
                     Dirancang khusus untuk peserta didik tingkat <strong>Sekolah Menengah Atas / Madrasah Aliyah (Kelas X, XI, dan XII)</strong> yang sedang mempersiapkan pilihan peminatan studi lanjut maupun arah karier.
                 </p>
             </div>
 
             <div class="grid-3">
-                <div class="card">
+                <div class="card card-blue-top">
                     <h3 class="card-h">Tugas Perkembangan Karier</h3>
                     <p class="card-p">
                         Siswa SMA/MA berada pada fase eksplorasi karier: mulai memetakan minat pribadi, memilih mata pelajaran peminatan, serta merencanakan studi lanjut atau dunia kerja.
                     </p>
                 </div>
-                <div class="card">
-                    <h3 class="card-h">Karakteristik Belajar</h3>
+
+                <div class="card card-gray-top">
+                    <h3 class="card-h slate">Karakteristik Belajar</h3>
                     <p class="card-p">
-                        Remaja usia 15-18 tahun lebih antusias terhadap asesmen yang interaktif, visual, berwarna lembut, dan terhubung langsung dengan permainan kelompok Kuartet RIASEC.
+                        Remaja usia 15-18 tahun lebih antusias terhadap asesmen yang interaktif, visual, terstruktur, dan terhubung langsung dengan permainan kelompok Kuartet RIASEC.
                     </p>
                 </div>
-                <div class="card">
+
+                <div class="card card-blue-top">
                     <h3 class="card-h">Kesesuaian Akses ICT</h3>
                     <p class="card-p">
-                        Ukuran file sangat ringan (~106 KB) dan tanpa ketergantungan server berat, sehingga tetap lancar diakses siswa melalui ponsel maupun komputer sekolah dengan koneksi terbatas.
+                        Ukuran file sangat ringan dan tanpa ketergantungan server berat, sehingga tetap lancar diakses siswa melalui ponsel maupun komputer sekolah dengan koneksi terbatas.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="slide-foot">
-            <span>Rancangan Media BK Berbasis ICT - Kunci Karierku (RIASEC)</span>
-            <span class="slide-num">3 / 10</span>
-        </div>
+        <footer class="ppt-footer">
+            <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
+            <span class="page-badge">3 / 8</span>
+        </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 4: POIN 4 - TUJUAN MEDIA
+         SLIDE 4: KOMPONEN 4 - TUJUAN MEDIA
     ========================================================== -->
     <section class="slide">
-        <div class="slide-head">
-            <div>
-                <span class="slide-kicker">Komponen 4</span>
-                <h2 class="slide-title">Tujuan Media dalam Layanan BK</h2>
+        <header class="ppt-header">
+            <div class="head-left">
+                <span class="comp-pill">Komponen 4</span>
+                <h1 class="slide-title">Tujuan Media dalam Layanan BK</h1>
             </div>
-            <div class="slide-brand-mini">
-                <div class="mini-grid">
-                    <span style="background:#185278;"></span><span style="background:#1F5C34;"></span><span style="background:#5B2C78;"></span>
-                    <span style="background:#96470E;"></span><span style="background:#91233F;"></span><span style="background:#6B5104;"></span>
-                </div>
-                <div class="mini-brand-text">Kunci Karierku<br>RIASEC</div>
+            <div class="head-right-tag">
+                <strong>Media BK Berbasis ICT</strong>
+                <span>Kunci Karierku (RIASEC)</span>
             </div>
-        </div>
+        </header>
 
-        <div class="slide-body">
-            <div class="card card-left-bar" style="margin-bottom: 20px;">
-                <h3 class="card-h">Tujuan Umum Layanan Bimbingan Karier</h3>
-                <p class="card-p" style="color: var(--ink-primary);">
+        <div class="ppt-body">
+            <div class="card inset-left-card">
+                <h2 class="card-h" style="margin-bottom: 6px;">Tujuan Umum Layanan Bimbingan Karier</h2>
+                <p class="card-p" style="color: var(--ink-dark);">
                     Membantu peserta didik mengungkap proses penyesuaian diri serta mengidentifikasi kecenderungan tipe kepribadian dan pilihan pekerjaan berdasarkan teori <strong>John L. Holland (RIASEC)</strong> sebelum bermain Kuartet RIASEC.
                 </p>
             </div>
 
             <div class="grid-2">
-                <div class="card">
+                <div class="card card-blue-top">
                     <ul class="clean-list">
                         <li>
-                            <span class="num-chip">1</span>
+                            <span class="num-badge">1</span>
                             <div>
                                 <strong>Pemetaan Diri &amp; Minat Profesi</strong><br>
                                 <span class="card-p">Memfasilitasi siswa menilai kesesuaian diri melalui 24 pernyataan kepribadian dan 42 daftar profesi secara terstruktur.</span>
                             </div>
                         </li>
                         <li>
-                            <span class="num-chip">2</span>
+                            <span class="num-badge">2</span>
                             <div>
                                 <strong>Penentuan Kode Kunci Karir 3 Huruf</strong><br>
                                 <span class="card-p">Menghasilkan kombinasi 3 tipe dominan (misalnya I-S-R) secara otomatis beserta grafik profil skor maksimal 22 per kategori.</span>
@@ -743,17 +751,17 @@
                     </ul>
                 </div>
 
-                <div class="card">
+                <div class="card card-gray-top">
                     <ul class="clean-list">
                         <li>
-                            <span class="num-chip warm">3</span>
+                            <span class="num-badge slate">3</span>
                             <div>
-                                <strong>Pengenalan 24 Profesi Kuartet RIASEC</strong><br>
-                                <span class="card-p">Membekali siswa pemahaman ciri-ciri 24 profesi nyata di 6 kategori agar siap berinteraksi saat permainan Kuartet di kelas.</span>
+                                <strong>Pengenalan Profesi Kuartet RIASEC</strong><br>
+                                <span class="card-p">Membekali siswa pemahaman ciri-ciri profesi nyata di 6 kategori agar siap berinteraksi saat permainan Kuartet di kelas.</span>
                             </div>
                         </li>
                         <li>
-                            <span class="num-chip warm">4</span>
+                            <span class="num-badge slate">4</span>
                             <div>
                                 <strong>Dasar Konseling &amp; Perencanaan Karier</strong><br>
                                 <span class="card-p">Menyediakan lembar hasil cetak/PDF sebagai bahan diskusi lanjutan antara siswa dan Guru BK dalam layanan klasikal maupun individual.</span>
@@ -764,85 +772,79 @@
             </div>
         </div>
 
-        <div class="slide-foot">
-            <span>Rancangan Media BK Berbasis ICT - Kunci Karierku (RIASEC)</span>
-            <span class="slide-num">4 / 10</span>
-        </div>
+        <footer class="ppt-footer">
+            <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
+            <span class="page-badge">4 / 8</span>
+        </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 5: POIN 5 - MANFAAT MEDIA
+         SLIDE 5: KOMPONEN 5 - MANFAAT MEDIA
     ========================================================== -->
     <section class="slide">
-        <div class="slide-head">
-            <div>
-                <span class="slide-kicker">Komponen 5</span>
-                <h2 class="slide-title">Manfaat Praktis Media</h2>
+        <header class="ppt-header">
+            <div class="head-left">
+                <span class="comp-pill">Komponen 5</span>
+                <h1 class="slide-title">Manfaat Praktis Media</h1>
             </div>
-            <div class="slide-brand-mini">
-                <div class="mini-grid">
-                    <span style="background:#185278;"></span><span style="background:#1F5C34;"></span><span style="background:#5B2C78;"></span>
-                    <span style="background:#96470E;"></span><span style="background:#91233F;"></span><span style="background:#6B5104;"></span>
-                </div>
-                <div class="mini-brand-text">Kunci Karierku<br>RIASEC</div>
+            <div class="head-right-tag">
+                <strong>Media BK Berbasis ICT</strong>
+                <span>Kunci Karierku (RIASEC)</span>
             </div>
-        </div>
+        </header>
 
-        <div class="slide-body">
+        <div class="ppt-body">
             <div class="grid-2">
-                <div class="card card-accent-top">
-                    <h3 class="card-h" style="color: var(--accent);">Bagi Konselor / Guru BK</h3>
+                <div class="card card-blue-top">
+                    <h2 class="card-h">Bagi Konselor / Guru BK</h2>
                     <ul class="clean-list" style="margin-top: 14px;">
-                        <li><span class="dot"></span><span><strong>Efisiensi Skoring Otomatis:</strong> Menghilangkan kesalahan hitung manual pada Baris 1, Baris 2, dan Total Baris 3 untuk seluruh siswa.</span></li>
-                        <li><span class="dot"></span><span><strong>Visualisasi Profil Instan:</strong> Grafik batang-garis dan kode 3 huruf langsung tampil sehingga Guru BK cepat membaca kecenderungan siswa.</span></li>
-                        <li><span class="dot"></span><span><strong>Jembatan ke Media Permainan:</strong> Memudahkan transisi dari asesmen individu menuju permainan kelompok Kuartet RIASEC yang terarah.</span></li>
-                        <li><span class="dot"></span><span><strong>Dokumentasi Siap Cetak:</strong> Fitur Cetak / Simpan PDF menghasilkan laporan rapi berisi identitas siswa, tabel skor, dan interpretasi.</span></li>
+                        <li><span class="dot-blue"></span><span><strong>Efisiensi Skoring Otomatis:</strong> Menghilangkan kesalahan hitung manual pada Baris 1, Baris 2, dan Total Baris 3 untuk seluruh siswa.</span></li>
+                        <li><span class="dot-blue"></span><span><strong>Visualisasi Profil Instan:</strong> Grafik batang-garis dan kode 3 huruf langsung tampil sehingga Guru BK cepat membaca kecenderungan siswa.</span></li>
+                        <li><span class="dot-blue"></span><span><strong>Jembatan ke Media Permainan:</strong> Memudahkan transisi dari asesmen individu menuju permainan kelompok Kuartet RIASEC yang terarah.</span></li>
+                        <li><span class="dot-blue"></span><span><strong>Dokumentasi Siap Cetak:</strong> Fitur Cetak / Simpan PDF menghasilkan laporan rapi berisi identitas siswa, tabel skor, dan interpretasi.</span></li>
                     </ul>
                 </div>
 
-                <div class="card card-accent-top card-warm-top">
-                    <h3 class="card-h" style="color: var(--warm);">Bagi Peserta Didik</h3>
+                <div class="card card-gray-top">
+                    <h2 class="card-h slate">Bagi Peserta Didik</h2>
                     <ul class="clean-list" style="margin-top: 14px;">
-                        <li><span class="dot warm"></span><span><strong>Mengenal Potensi Diri Secara Mandiri:</strong> Siswa langsung mengetahui 3 tipe kepribadian karier terkuatnya beserta penjelasan yang jelas.</span></li>
-                        <li><span class="dot warm"></span><span><strong>Belajar Profesi Tanpa Bosan:</strong> Eksplorasi 24 kartu profesi (Polisi, Programmer, Psikolog, Akuntan, dll.) terasa seperti mengenal kartu main.</span></li>
-                        <li><span class="dot warm"></span><span><strong>Ramah Pengguna &amp; Bebas Salah Isi:</strong> Validasi otomatis menandai item yang terlewat dan menggulir layar tepat ke soal tersebut.</span></li>
-                        <li><span class="dot warm"></span><span><strong>Akses Mudah dari Mana Saja:</strong> Dapat dibuka lewat HP siswa di rumah maupun komputer sekolah tanpa perlu membuat akun atau login.</span></li>
+                        <li><span class="dot-gray"></span><span><strong>Mengenal Potensi Diri Secara Mandiri:</strong> Siswa langsung mengetahui 3 tipe kepribadian karier terkuatnya beserta penjelasan yang jelas.</span></li>
+                        <li><span class="dot-gray"></span><span><strong>Belajar Profesi Tanpa Bosan:</strong> Eksplorasi ragam profesi dan ciri-cirinya terasa lebih menarik sebelum bermain kartu bersama teman.</span></li>
+                        <li><span class="dot-gray"></span><span><strong>Ramah Pengguna &amp; Bebas Salah Isi:</strong> Validasi otomatis menandai item yang terlewat dan menggulir layar tepat ke soal tersebut.</span></li>
+                        <li><span class="dot-gray"></span><span><strong>Akses Mudah dari Mana Saja:</strong> Dapat dibuka lewat HP siswa di rumah maupun komputer sekolah tanpa perlu membuat akun atau login.</span></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="slide-foot">
-            <span>Rancangan Media BK Berbasis ICT - Kunci Karierku (RIASEC)</span>
-            <span class="slide-num">5 / 10</span>
-        </div>
+        <footer class="ppt-footer">
+            <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
+            <span class="page-badge">5 / 8</span>
+        </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 6: POIN 6 - DESKRIPSI RANCANGAN MEDIA
+         SLIDE 6: KOMPONEN 6 - DESKRIPSI RANCANGAN MEDIA (TANPA "24 KARTU")
     ========================================================== -->
     <section class="slide">
-        <div class="slide-head">
-            <div>
-                <span class="slide-kicker">Komponen 6</span>
-                <h2 class="slide-title">Deskripsi Rancangan Media &amp; Fitur Utama</h2>
+        <header class="ppt-header">
+            <div class="head-left">
+                <span class="comp-pill">Komponen 6</span>
+                <h1 class="slide-title">Deskripsi Rancangan Media &amp; Fitur Utama</h1>
             </div>
-            <div class="slide-brand-mini">
-                <div class="mini-grid">
-                    <span style="background:#185278;"></span><span style="background:#1F5C34;"></span><span style="background:#5B2C78;"></span>
-                    <span style="background:#96470E;"></span><span style="background:#91233F;"></span><span style="background:#6B5104;"></span>
-                </div>
-                <div class="mini-brand-text">Kunci Karierku<br>RIASEC</div>
+            <div class="head-right-tag">
+                <strong>Media BK Berbasis ICT</strong>
+                <span>Kunci Karierku (RIASEC)</span>
             </div>
-        </div>
+        </header>
 
-        <div class="slide-body">
+        <div class="ppt-body">
             <div class="grid-4">
                 <div class="step-card">
                     <div>
                         <span class="step-badge">Halaman 0</span>
-                        <h3 class="step-title">Beranda &amp; Identitas</h3>
-                        <p class="step-desc">Menampilkan pengantar Kunci Karierku, ringkasan 6 tipe RIASEC, serta lembar identitas opsional (Nama, Kelas, Tanggal).</p>
+                        <h2 class="step-title">Beranda &amp; Identitas</h2>
+                        <p class="step-desc">Menampilkan pengantar Tes Kunci Karir Holland, ringkasan 6 tipe RIASEC, serta lembar identitas opsional (Nama, Kelas, Tanggal).</p>
                     </div>
                     <div class="step-foot">Layout 2 Kolom Sejajar</div>
                 </div>
@@ -850,7 +852,7 @@
                 <div class="step-card">
                     <div>
                         <span class="step-badge">Halaman 1</span>
-                        <h3 class="step-title">Bagian 1: Diri</h3>
+                        <h2 class="step-title">Bagian 1: Diri</h2>
                         <p class="step-desc">24 pernyataan gambaran diri (4 per kategori R-I-A-S-E-C) dengan skala 2 (Sangat Sesuai), 1 (Agak Sesuai), 0 (Tidak Menggambarkan).</p>
                     </div>
                     <div class="step-foot">Skor Maks. 8 / Kategori</div>
@@ -858,8 +860,8 @@
 
                 <div class="step-card">
                     <div>
-                        <span class="step-badge">Halaman 2</span>
-                        <h3 class="step-title">Bagian 2: Profesi</h3>
+                        <span class="step-badge gray">Halaman 2</span>
+                        <h2 class="step-title">Bagian 2: Profesi</h2>
                         <p class="step-desc">42 daftar profesi (7 per kategori) dengan skala 2 (Sangat Berminat), 1 (Mungkin), 0 (Tidak Memilih) dan penghitung progres real-time.</p>
                     </div>
                     <div class="step-foot">Skor Maks. 14 / Kategori</div>
@@ -867,157 +869,120 @@
 
                 <div class="step-card">
                     <div>
-                        <span class="step-badge">Halaman 3</span>
-                        <h3 class="step-title">Hasil &amp; 24 Kartu</h3>
-                        <p class="step-desc">Kode 3 huruf dominan, grafik profil SVG, tabel rekapitulasi, interpretasi 3 tipe teratas, 24 kartu Kuartet RIASEC, dan panduan main.</p>
+                        <span class="step-badge gray">Halaman 3</span>
+                        <h2 class="step-title">Hasil Tes &amp; Panduan</h2>
+                        <p class="step-desc">Menampilkan kode 3 huruf dominan, grafik profil, tabel rekapitulasi skor, interpretasi 3 tipe teratas, serta panduan bermain Kuartet RIASEC.</p>
                     </div>
                     <div class="step-foot">Total Maks. 22 + Cetak PDF</div>
                 </div>
             </div>
 
             <div class="callout-bar">
-                <div>
-                    <strong>Fitur Pendukung Prototipe:</strong> Indikator progres total (<code>X/66</code>), validasi otomatis item belum terisi dengan sorotan merah, modal konfirmasi ulangi tes, serta mode cetak PDF bersih.
-                </div>
+                <strong>Fitur Pendukung Prototipe:</strong> Indikator progres pengisian (<code>X/66</code>), validasi otomatis item yang belum terisi dengan sorotan merah, modal konfirmasi ulangi tes, serta mode cetak PDF bersih.
             </div>
         </div>
 
-        <div class="slide-foot">
-            <span>Rancangan Media BK Berbasis ICT - Kunci Karierku (RIASEC)</span>
-            <span class="slide-num">6 / 10</span>
-        </div>
+        <footer class="ppt-footer">
+            <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
+            <span class="page-badge">6 / 8</span>
+        </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 7: BUKTI VISUAL PROTOTIPE SAAT INI
+         SLIDE 7: KOMPONEN 7 - PROSEDUR PEMBUATAN (REVISI NONTEKNIS & TEKNIS AWAM)
     ========================================================== -->
     <section class="slide">
-        <div class="slide-head">
-            <div>
-                <span class="slide-kicker warm">Preview Prototipe Berjalan</span>
-                <h2 class="slide-title">Tampilan Halaman Hasil &amp; 24 Kartu Kuartet RIASEC</h2>
+        <header class="ppt-header">
+            <div class="head-left">
+                <span class="comp-pill">Komponen 7</span>
+                <h1 class="slide-title">Prosedur Pembuatan Media (Nonteknis &amp; Teknis)</h1>
             </div>
-            <div class="slide-brand-mini">
-                <div class="mini-grid">
-                    <span style="background:#185278;"></span><span style="background:#1F5C34;"></span><span style="background:#5B2C78;"></span>
-                    <span style="background:#96470E;"></span><span style="background:#91233F;"></span><span style="background:#6B5104;"></span>
-                </div>
-                <div class="mini-brand-text">Kunci Karierku<br>RIASEC</div>
+            <div class="head-right-tag">
+                <strong>Media BK Berbasis ICT</strong>
+                <span>Kunci Karierku (RIASEC)</span>
             </div>
-        </div>
+        </header>
 
-        <div class="slide-body">
-            <div class="dual-shots">
-                <div class="shot-frame">
-                    <img src="file:///home/orangepi/.hermes/cache/scratch/riasec_shots/04_results_desktop.png" alt="Halaman Hasil Tes Kunci Karir">
-                    <div class="shot-caption">Kode 3 Huruf Dominan, Grafik Profil SVG, dan Tabel Rekapitulasi Skor</div>
-                </div>
-                <div class="shot-frame">
-                    <img src="file:///home/orangepi/.hermes/cache/scratch/riasec_shots/05_quartet_desktop.png" alt="Eksplorasi 24 Kartu Kuartet RIASEC">
-                    <div class="shot-caption">Eksplorasi 24 Kartu Profesi Kuartet RIASEC (4 Kartu per Kategori)</div>
-                </div>
-            </div>
-
-            <div class="callout-bar warm">
-                <span><strong>Catatan Tahap Prototipe:</strong> Seluruh fitur inti sudah aktif dan dapat diuji coba jarak jauh melalui <strong>https://dvoidd.github.io/kunci-karierku-riasec/</strong>.</span>
-            </div>
-        </div>
-
-        <div class="slide-foot">
-            <span>Rancangan Media BK Berbasis ICT - Kunci Karierku (RIASEC)</span>
-            <span class="slide-num">7 / 10</span>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         SLIDE 8: POIN 7 - PROSEDUR PEMBUATAN
-    ========================================================== -->
-    <section class="slide">
-        <div class="slide-head">
-            <div>
-                <span class="slide-kicker">Komponen 7</span>
-                <h2 class="slide-title">Prosedur Pembuatan Media (Nonteknis &amp; Teknis)</h2>
-            </div>
-            <div class="slide-brand-mini">
-                <div class="mini-grid">
-                    <span style="background:#185278;"></span><span style="background:#1F5C34;"></span><span style="background:#5B2C78;"></span>
-                    <span style="background:#96470E;"></span><span style="background:#91233F;"></span><span style="background:#6B5104;"></span>
-                </div>
-                <div class="mini-brand-text">Kunci Karierku<br>RIASEC</div>
-            </div>
-        </div>
-
-        <div class="slide-body">
+        <div class="ppt-body">
             <div class="grid-2">
-                <div class="card card-accent-top">
-                    <h3 class="card-h">A. Langkah Nonteknis (Konten &amp; Pedagogis)</h3>
+                <div class="card card-blue-top">
+                    <h2 class="card-h">A. Langkah Nonteknis (Konten &amp; Pedagogis)</h2>
                     <ul class="clean-list" style="margin-top: 14px;">
                         <li>
-                            <span class="num-chip">1</span>
-                            <div><strong>Analisis Kebutuhan Layanan BK:</strong> Mengidentifikasi kebutuhan siswa SMA/MA dalam memahami minat karier sebelum bermain Kuartet RIASEC.</div>
+                            <span class="num-badge">1</span>
+                            <div>
+                                <strong>Asesmen terkait kebutuhan layanan BK:</strong> Mengidentifikasi kebutuhan siswa SMA/MA dalam memahami minat karier sebelum bermain Kuartet RIASEC.
+                            </div>
                         </li>
                         <li>
-                            <span class="num-chip">2</span>
-                            <div><strong>Penyusunan Instrumen Holland:</strong> Menyiapkan 24 pernyataan diri (Bagian 1), 42 daftar profesi (Bagian 2), serta aturan penjumlahan Baris 1, 2, dan 3.</div>
+                            <span class="num-badge">2</span>
+                            <div>
+                                <strong>Penyusunan Instrumen Holland:</strong> Menyiapkan 24 pernyataan diri (Bagian 1), 42 daftar profesi (Bagian 2), serta aturan penjumlahan Baris 1, 2, dan 3.
+                            </div>
                         </li>
                         <li>
-                            <span class="num-chip">3</span>
-                            <div><strong>Kurasi 24 Kartu Kuartet &amp; Panduan:</strong> Menyusun 4 profesi beserta ciri-ciri khas untuk tiap kategori R-I-A-S-E-C dan aturan main kelompok.</div>
+                            <span class="num-badge">3</span>
+                            <div>
+                                <strong>Kurasi 24 Kartu Kuartet &amp; Panduan:</strong> Menyusun 4 profesi beserta ciri-ciri khas untuk tiap kategori R-I-A-S-E-C dan aturan main kelompok.
+                            </div>
                         </li>
                     </ul>
                 </div>
 
-                <div class="card card-accent-top card-warm-top">
-                    <h3 class="card-h">B. Langkah Teknis (Pengembangan Prototipe)</h3>
+                <div class="card card-gray-top">
+                    <h2 class="card-h slate">B. Langkah Teknis (Pengembangan)</h2>
                     <ul class="clean-list" style="margin-top: 14px;">
                         <li>
-                            <span class="num-chip warm">1</span>
-                            <div><strong>Desain Antarmuka Ramah Siswa:</strong> Merancang tata letak responsif, palet kertas hangat, tipografi Lora + Inter, dan warna pastel lembut per kategori RIASEC.</div>
+                            <span class="num-badge slate">1</span>
+                            <div>
+                                <strong>Merancang Tampilan Halaman:</strong> Menyusun tata letak halaman awal, lembar soal, dan halaman hasil agar rapi, jelas dibaca, dan nyaman dibuka di HP maupun komputer.
+                            </div>
                         </li>
                         <li>
-                            <span class="num-chip warm">2</span>
-                            <div><strong>Pengkodean Web Statis Mandiri:</strong> Membangun satu file <code>index.html</code> (HTML5, CSS3 native, dan JavaScript untuk skoring, grafik SVG, serta cetak PDF).</div>
+                            <span class="num-badge slate">2</span>
+                            <div>
+                                <strong>Membuat Sistem Hitung &amp; Grafik Otomatis:</strong> Mengatur agar jawaban siswa langsung dihitung otomatis menjadi kode 3 huruf dominan, grafik profil, dan lembar hasil siap cetak PDF.
+                            </div>
                         </li>
                         <li>
-                            <span class="num-chip warm">3</span>
-                            <div><strong>Pengujian &amp; Hosting Prototipe:</strong> Menguji alur pengisian di desktop/HP, lalu memublikasikan prototipe ke GitHub Pages agar mudah diakses untuk review.</div>
+                            <span class="num-badge slate">3</span>
+                            <div>
+                                <strong>Uji Coba &amp; Publikasi Tautan Web:</strong> Memeriksa seluruh tombol dan alur pengisian agar berjalan lancar, lalu mengunggahnya ke internet agar mudah dibuka lewat tautan web.
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="slide-foot">
-            <span>Rancangan Media BK Berbasis ICT - Kunci Karierku (RIASEC)</span>
-            <span class="slide-num">8 / 10</span>
-        </div>
+        <footer class="ppt-footer">
+            <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
+            <span class="page-badge">7 / 8</span>
+        </footer>
     </section>
 
     <!-- =========================================================
-         SLIDE 9: POIN 8 - PROSEDUR PENGGUNAAN
+         SLIDE 8: KOMPONEN 8 - PROSEDUR PENGGUNAAN
     ========================================================== -->
     <section class="slide">
-        <div class="slide-head">
-            <div>
-                <span class="slide-kicker">Komponen 8</span>
-                <h2 class="slide-title">Prosedur Penggunaan dalam Layanan BK</h2>
+        <header class="ppt-header">
+            <div class="head-left">
+                <span class="comp-pill">Komponen 8</span>
+                <h1 class="slide-title">Prosedur Penggunaan dalam Layanan BK</h1>
             </div>
-            <div class="slide-brand-mini">
-                <div class="mini-grid">
-                    <span style="background:#185278;"></span><span style="background:#1F5C34;"></span><span style="background:#5B2C78;"></span>
-                    <span style="background:#96470E;"></span><span style="background:#91233F;"></span><span style="background:#6B5104;"></span>
-                </div>
-                <div class="mini-brand-text">Kunci Karierku<br>RIASEC</div>
+            <div class="head-right-tag">
+                <strong>Media BK Berbasis ICT</strong>
+                <span>Kunci Karierku (RIASEC)</span>
             </div>
-        </div>
+        </header>
 
-        <div class="slide-body">
+        <div class="ppt-body">
             <div class="grid-4">
                 <div class="step-card">
                     <div>
                         <span class="step-badge">Langkah 1</span>
-                        <h3 class="step-title">Akses &amp; Identitas</h3>
-                        <p class="step-desc">Guru BK membagikan tautan web atau file HTML. Siswa membuka di HP/komputer, mengisi Nama, Kelas, dan Tanggal (opsional), lalu menekan <strong>Mulai Tes Kunci Karir</strong>.</p>
+                        <h2 class="step-title">Akses &amp; Identitas</h2>
+                        <p class="step-desc">Guru BK membagikan tautan web atau file aplikasi. Siswa membuka di HP/komputer, mengisi Nama, Kelas, dan Tanggal (opsional), lalu menekan <strong>Mulai Tes Kunci Karir</strong>.</p>
                     </div>
                     <div class="step-foot">Durasi: ~1 menit</div>
                 </div>
@@ -1025,7 +990,7 @@
                 <div class="step-card">
                     <div>
                         <span class="step-badge">Langkah 2</span>
-                        <h3 class="step-title">Isi Bagian 1 &amp; 2</h3>
+                        <h2 class="step-title">Isi Bagian 1 &amp; 2</h2>
                         <p class="step-desc">Siswa memilih skor <code>2 / 1 / 0</code> pada 24 pernyataan diri (Bagian 1) dan 42 profesi (Bagian 2). Sistem memastikan seluruh 66 item terisi sebelum lanjut.</p>
                     </div>
                     <div class="step-foot">Durasi: ~8-10 menit</div>
@@ -1033,17 +998,17 @@
 
                 <div class="step-card">
                     <div>
-                        <span class="step-badge">Langkah 3</span>
-                        <h3 class="step-title">Pahami Hasil &amp; Kartu</h3>
-                        <p class="step-desc">Siswa membaca <strong>Kode 3 Huruf Dominan</strong>, grafik profil, dan deskripsi 3 tipe teratas, lalu membuka tab kategori bertanda <code>(*)</code> untuk mempelajari 4 kartu profesinya.</p>
+                        <span class="step-badge gray">Langkah 3</span>
+                        <h2 class="step-title">Pahami Hasil Tes</h2>
+                        <p class="step-desc">Siswa membaca <strong>Kode 3 Huruf Dominan</strong>, grafik profil, dan deskripsi 3 tipe teratas, lalu mempelajari profesi pada kategori unggulannya.</p>
                     </div>
                     <div class="step-foot">Durasi: ~5 menit</div>
                 </div>
 
                 <div class="step-card">
                     <div>
-                        <span class="step-badge">Langkah 4</span>
-                        <h3 class="step-title">Main Kuartet &amp; Arsip</h3>
+                        <span class="step-badge gray">Langkah 4</span>
+                        <h2 class="step-title">Main Kuartet &amp; Arsip</h2>
                         <p class="step-desc">Siswa membentuk kelompok 4-5 orang untuk bermain kartu Kuartet RIASEC sesuai panduan di layar, lalu menekan <strong>Cetak / Simpan PDF</strong> untuk arsip konseling BK.</p>
                     </div>
                     <div class="step-foot">Layanan Klasikal / Kelompok</div>
@@ -1051,69 +1016,14 @@
             </div>
 
             <div class="callout-bar">
-                <span><strong>Tips Operasional Guru BK:</strong> Untuk mengulang pengisian atau berganti siswa di komputer lab yang sama, klik tombol <strong>Ulangi Tes</strong> di halaman hasil.</span>
+                <strong>Tips Operasional Guru BK:</strong> Untuk mengulang pengisian atau berganti siswa di komputer lab yang sama, klik tombol <strong>Ulangi Tes</strong> di halaman hasil.
             </div>
         </div>
 
-        <div class="slide-foot">
-            <span>Rancangan Media BK Berbasis ICT - Kunci Karierku (RIASEC)</span>
-            <span class="slide-num">9 / 10</span>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         SLIDE 10: STATUS PROTOTIPE & RENCANA LANJUTAN
-    ========================================================== -->
-    <section class="slide">
-        <div class="slide-head">
-            <div>
-                <span class="slide-kicker warm">Penutup &amp; Tindak Lanjut</span>
-                <h2 class="slide-title">Status Prototipe &amp; Rencana Pengembangan</h2>
-            </div>
-            <div class="slide-brand-mini">
-                <div class="mini-grid">
-                    <span style="background:#185278;"></span><span style="background:#1F5C34;"></span><span style="background:#5B2C78;"></span>
-                    <span style="background:#96470E;"></span><span style="background:#91233F;"></span><span style="background:#6B5104;"></span>
-                </div>
-                <div class="mini-brand-text">Kunci Karierku<br>RIASEC</div>
-            </div>
-        </div>
-
-        <div class="slide-body">
-            <div class="grid-2">
-                <div class="card card-accent-top">
-                    <h3 class="card-h">Capaian Prototipe Saat Ini</h3>
-                    <ul class="clean-list" style="margin-top: 14px;">
-                        <li><span class="dot"></span><span>Seluruh 66 item instrumen Tes Kunci Karir Holland dan 24 kartu Kuartet RIASEC sudah terintegrasi utuh.</span></li>
-                        <li><span class="dot"></span><span>Perhitungan skor otomatis, grafik profil SVG, validasi item kosong, dan mode cetak PDF berjalan lancar di desktop maupun HP.</span></li>
-                        <li><span class="dot"></span><span>Prototipe sudah di-hosting secara statis di GitHub Pages sehingga siap ditinjau dosen, guru BK, maupun penguji dari jarak jauh.</span></li>
-                    </ul>
-                </div>
-
-                <div class="card card-accent-top card-warm-top">
-                    <h3 class="card-h">Tahap Pengembangan Berikutnya</h3>
-                    <ul class="clean-list" style="margin-top: 14px;">
-                        <li><span class="dot warm"></span><span><strong>Uji Validasi Ahli:</strong> Penilaian kelayakan isi oleh ahli materi Bimbingan dan Konseling serta ahli media pembelajaran ICT.</span></li>
-                        <li><span class="dot warm"></span><span><strong>Uji Coba Terbatas:</strong> Pengujian langsung bersama siswa SMA/MA untuk mengukur kejelasan bahasa, durasi pengisian, dan kenyamanan tampilan.</span></li>
-                        <li><span class="dot warm"></span><span><strong>Penyempurnaan Fitur:</strong> Penambahan simpan draf otomatis di peramban (<em>localStorage</em>) dan opsi rekap hasil kelas bagi Guru BK.</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="callout-bar" style="margin-top: 20px;">
-                <div>
-                    <strong>Tautan Preview Prototipe:</strong> https://dvoidd.github.io/kunci-karierku-riasec/
-                </div>
-                <div>
-                    <strong>Repositori:</strong> github.com/dvoidd/kunci-karierku-riasec
-                </div>
-            </div>
-        </div>
-
-        <div class="slide-foot">
-            <span>Terima Kasih - Rancangan Media BK Berbasis ICT (Kunci Karierku RIASEC)</span>
-            <span class="slide-num">10 / 10</span>
-        </div>
+        <footer class="ppt-footer">
+            <span>Rancangan Media Bimbingan dan Konseling Berbasis ICT</span>
+            <span class="page-badge">8 / 8</span>
+        </footer>
     </section>
 
 </body>
